@@ -81,7 +81,10 @@ async function loadEvents() {
       alertElement.textContent = 'Last scraped: unknown';
     }
   } catch (error) {
-    alertElement.textContent = `Unable to load event data (${error.message}).`;
+    const hint = error.message.toLowerCase().includes('failed to fetch') || error.message === 'failed to fetch'
+      ? ' – open the site via a local HTTP server (e.g. python -m http.server 8000) rather than directly from the filesystem'
+      : '';
+    alertElement.textContent = `Unable to load event data (${error.message})${hint}.`;
     renderEvents([]);
   }
 }
