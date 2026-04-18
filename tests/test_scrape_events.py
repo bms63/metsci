@@ -28,6 +28,30 @@ class ScrapeEventsTests(unittest.TestCase):
         }
         self.assertEqual("Alpha, Beta", extract_band_names(node))
 
+    def test_extract_band_names_skips_organization_type(self):
+        """Performer entries typed as Organization (venue placeholders) should be
+        ignored so the function falls back to the event's own name."""
+        node = {
+            "name": "Chameleons",
+            "performer": {"@type": "Organization", "name": "Organization"},
+        }
+        self.assertEqual("Chameleons", extract_band_names(node))
+
+    def test_extract_band_names_skips_organization_in_list(self):
+        """Mixed performer lists: Organization entries are dropped, real acts kept."""
+        node = {
+            "name": "Fallback Title",
+            "performer": [
+                {"@type": "MusicGroup", "name": "The Real Band"},
+                {"@type": "Organization", "name": "The Venue"},
+            ],
+        }
+        self.assertEqual("The Real Band", extract_band_names(node))
+
+    def test_extract_band_names_falls_back_to_event_name_when_no_performers(self):
+        node = {"name": "Show Title"}
+        self.assertEqual("Show Title", extract_band_names(node))
+
     def test_normalize_date(self):
         self.assertEqual("2026-05-01", normalize_date("2026-05-01T20:00:00-04:00"))
         self.assertEqual("2026-07-09", normalize_date("2026-07-09"))

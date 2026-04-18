@@ -100,6 +100,9 @@ def extract_band_names(node: dict[str, Any]) -> str:
         if isinstance(candidate, str) and candidate.strip():
             names.append(candidate.strip())
         elif isinstance(candidate, dict):
+            # Skip Organization-typed entries – these are venues/promoters, not acts.
+            if candidate.get("@type") == "Organization":
+                return
             name = candidate.get("name")
             if isinstance(name, str) and name.strip():
                 names.append(name.strip())
@@ -114,6 +117,8 @@ def extract_band_names(node: dict[str, Any]) -> str:
         deduped = list(dict.fromkeys(names))
         return ", ".join(deduped)
 
+    # Fall back to the event's own name (e.g. show title) when performer data
+    # is absent or was entirely made up of Organization placeholders.
     title = node.get("name")
     if isinstance(title, str) and title.strip():
         return title.strip()
@@ -171,7 +176,13 @@ def main() -> None:
 
     for source in SOURCES:
         try:
-            all_events.extend(scrape_source(source))
+            source_events = scrape_source(source)
+            if not source_events:
+                errors.append(
+                    f"{source['venue']}: no events found – the page may require "
+                    "JavaScript rendering or its schema has changed"
+                )
+            all_events.extend(source_events)
         except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
             errors.append(f"{source['venue']}: {exc}")
 
