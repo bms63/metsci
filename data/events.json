@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T22:23:29.528293+00:00",
+  "generated_at": "2026-04-18T22:39:04.435306+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -370,5 +370,8 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/anna-von-hausswolff-179765"
     }
   ],
-  "errors": []
+  "errors": [
+    "Union Transfer: no events found \u2013 the page may require JavaScript rendering or its schema has changed",
+    "The Fillmore: no events found \u2013 the page may require JavaScript rendering or its schema has changed"
+  ]
 }
