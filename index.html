@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Facehuggers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Facehuggers</h1>
+    <img src="assets/facehugger.svg" alt="Silly facehugger illustration" class="hero-image" />
+    <p class="subtitle">Philadelphia venue events in one place.</p>
+    <p id="scrape-alert" class="alert">Loading latest scrape time...</p>
+  </header>
+
+  <main>
+    <label for="search" class="search-label">Filter shows</label>
+    <input id="search" type="search" placeholder="Search band, venue, or date" />
+
+    <table id="events-table" aria-label="Facehuggers events table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Bands</th>
+          <th>Venue</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

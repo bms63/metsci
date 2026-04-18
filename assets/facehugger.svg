@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 180" role="img" aria-label="Silly facehugger illustration">
+  <rect width="360" height="180" fill="#f6f0e8"/>
+  <ellipse cx="180" cy="84" rx="78" ry="44" fill="#d5b08f" stroke="#8d6f57" stroke-width="4"/>
+  <ellipse cx="180" cy="84" rx="44" ry="22" fill="#bf9576"/>
+  <path d="M76 88c-20 0-30 12-30 22s11 18 22 18 20-7 27-16" fill="none" stroke="#8d6f57" stroke-width="6" stroke-linecap="round"/>
+  <path d="M284 88c20 0 30 12 30 22s-11 18-22 18-20-7-27-16" fill="none" stroke="#8d6f57" stroke-width="6" stroke-linecap="round"/>
+  <path d="M180 126c8 12 18 28 8 42" fill="none" stroke="#8d6f57" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="162" cy="80" r="5" fill="#412f24"/>
+  <circle cx="198" cy="80" r="5" fill="#412f24"/>
+  <path d="M164 96c10 8 22 8 32 0" fill="none" stroke="#7a5743" stroke-width="4" stroke-linecap="round"/>
+  <text x="180" y="168" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle" fill="#5c4638">facehug responsibly</text>
+</svg>
