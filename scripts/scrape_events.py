@@ -37,6 +37,10 @@ INLINE_SCRIPT_PATTERN = re.compile(
     r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script[^>]*>",
     flags=re.IGNORECASE | re.DOTALL,
 )
+EVENT_KEYWORD_PATTERN = re.compile(
+    r"\b(event|startDate|start_date|showDate)\b",
+    flags=re.IGNORECASE,
+)
 
 EVENT_DATE_KEYS = ("startDate", "start_date", "eventDate", "showDate")
 EVENT_NAME_KEYS = ("name", "title", "eventName")
@@ -117,7 +121,7 @@ def extract_event_nodes(html: str) -> list[dict[str, Any]]:
     seen_nodes: set[tuple[Any, ...]] = set()
     raw_blocks = SCRIPT_TAG_PATTERN.findall(html)
     for script_block in INLINE_SCRIPT_PATTERN.findall(html):
-        if re.search(r"\b(event|startDate|start_date|showDate)\b", script_block, flags=re.IGNORECASE):
+        if EVENT_KEYWORD_PATTERN.search(script_block):
             raw_blocks.append(script_block)
     for raw_block in raw_blocks:
         block = raw_block.strip()
