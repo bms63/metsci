@@ -59,6 +59,12 @@ EVENT_DATE_KEYS = (
 )
 EVENT_NAME_KEYS = ("name", "title", "eventName", "event_name", "headline", "artist")
 EVENT_URL_KEYS = ("url", "link", "eventUrl", "event_url", "permalink", "eventLink")
+UNION_TRANSFER_EVENT_LINK_PATTERN = re.compile(
+    r"(?:https?://www\.utphilly\.com)?(?:\\?/)+events(?:\\?/)+detail(?:\\?/)+\?event_id=\d+",
+    flags=re.IGNORECASE,
+)
+H2_TEXT_PATTERN = re.compile(r"<h2[^>]*>(.*?)</h2>", flags=re.IGNORECASE | re.DOTALL)
+TAG_PATTERN = re.compile(r"<[^>]+>")
 
 
 def fetch_html(url: str) -> str:
@@ -115,6 +121,89 @@ def _extract_link(node: dict[str, Any], source_url: str) -> str:
                     return urljoin(source_url, offer_url)
 
     return ""
+
+
+def _clean_html_text(value: str) -> str:
+    text = TAG_PATTERN.sub(" ", value)
+    return re.sub(r"\s+", " ", unescape(text)).strip()
+
+
+def _extract_h2_title(html: str) -> str:
+    for match in H2_TEXT_PATTERN.findall(html):
+        title = _clean_html_text(match)
+        if title:
+            return title
+    return ""
+
+
+def _find_union_transfer_event_links(html: str, source_url: str) -> list[str]:
+    links: list[str] = []
+    seen: set[str] = set()
+
+    for raw_match in UNION_TRANSFER_EVENT_LINK_PATTERN.findall(html):
+        raw_link = raw_match.replace("\\/", "/")
+        absolute_link = urljoin(source_url, raw_link)
+        if absolute_link not in seen:
+            seen.add(absolute_link)
+            links.append(absolute_link)
+
+    return links
+
+
+def _event_from_node(node: dict[str, Any], source: dict[str, str], default_link: str = "") -> dict[str, str]:
+    link = _extract_link(node, source["url"]) or default_link
+    raw_start_date: Any = _first_nonempty_string(node, EVENT_DATE_KEYS)
+    bands = _first_nonempty_string(node, EVENT_NAME_KEYS)
+    if not bands:
+        bands = extract_band_names(node)
+    return {
+        "date": normalize_date(raw_start_date),
+        "bands": bands,
+        "venue": source["venue"],
+        "link": link,
+    }
+
+
+def _scrape_union_transfer_events(source: dict[str, str], calendar_html: str) -> list[dict[str, str]]:
+    events: list[dict[str, str]] = []
+    seen_links: set[str] = set()
+    processed_detail_links: set[str] = set()
+
+    for node in extract_event_nodes(calendar_html):
+        event = _event_from_node(node, source)
+        if event["link"]:
+            seen_links.add(event["link"])
+        events.append(event)
+
+    detail_links = _find_union_transfer_event_links(calendar_html, source["url"])
+    for detail_link in detail_links:
+        if detail_link in processed_detail_links:
+            continue
+        processed_detail_links.add(detail_link)
+
+        detail_html = fetch_html(detail_link)
+        detail_nodes = extract_event_nodes(detail_html)
+        if detail_nodes:
+            for node in detail_nodes:
+                event = _event_from_node(node, source, default_link=detail_link)
+                if event["link"] in seen_links:
+                    continue
+                seen_links.add(event["link"])
+                events.append(event)
+            continue
+
+        fallback_title = _extract_h2_title(detail_html)
+        if fallback_title:
+            events.append(
+                {
+                    "date": "TBA",
+                    "bands": fallback_title,
+                    "venue": source["venue"],
+                    "link": detail_link,
+                }
+            )
+
+    return events
 
 
 def _iter_json_fragments(text: str):
@@ -265,24 +354,13 @@ def extract_band_names(node: dict[str, Any]) -> str:
 
 def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
     html = fetch_html(source["url"])
+    if source["venue"] == "Union Transfer":
+        return _scrape_union_transfer_events(source, html)
+
     events: list[dict[str, str]] = []
 
     for node in extract_event_nodes(html):
-        link = _extract_link(node, source["url"])
-
-        raw_start_date: Any = _first_nonempty_string(node, EVENT_DATE_KEYS)
-        bands = _first_nonempty_string(node, EVENT_NAME_KEYS)
-        if not bands:
-            bands = extract_band_names(node)
-
-        events.append(
-            {
-                "date": normalize_date(raw_start_date),
-                "bands": bands,
-                "venue": source["venue"],
-                "link": link,
-            }
-        )
+        events.append(_event_from_node(node, source))
 
     return events
 

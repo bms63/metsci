@@ -1,9 +1,63 @@
 import unittest
 
-from scripts.scrape_events import extract_event_nodes, extract_band_names, normalize_date
+from scripts import scrape_events
+from scripts.scrape_events import (
+    _find_union_transfer_event_links,
+    extract_event_nodes,
+    extract_band_names,
+    normalize_date,
+    scrape_source,
+)
 
 
 class ScrapeEventsTests(unittest.TestCase):
+    def test_find_union_transfer_event_links(self):
+        html = """
+        <html><body>
+          <a href="/events/detail/?event_id=1146309">GoldFord</a>
+          <script>
+            window.__events = [{"url":"\\/events\\/detail\\/?event_id=1146310"}];
+          </script>
+          <a href="https://www.utphilly.com/events/detail/?event_id=1146309">Duplicate</a>
+        </body></html>
+        """
+        links = _find_union_transfer_event_links(html, "https://www.utphilly.com/calendar/")
+        self.assertEqual(
+            [
+                "https://www.utphilly.com/events/detail/?event_id=1146309",
+                "https://www.utphilly.com/events/detail/?event_id=1146310",
+            ],
+            links,
+        )
+
+    def test_scrape_source_union_transfer_uses_detail_pages_and_h2_fallback(self):
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        pages = {
+            "https://www.utphilly.com/calendar/": """
+                <a href="/events/detail/?event_id=1146309">GoldFord</a>
+                <a href="/events/detail/?event_id=1146310">No JSON-LD</a>
+            """,
+            "https://www.utphilly.com/events/detail/?event_id=1146309": """
+                <script type="application/ld+json">
+                  {"@type":"Event","name":"GoldFord","startDate":"2026-09-20","url":"/events/detail/?event_id=1146309"}
+                </script>
+            """,
+            "https://www.utphilly.com/events/detail/?event_id=1146310": "<h2>Manual Fallback Band</h2>",
+        }
+
+        original_fetch_html = scrape_events.fetch_html
+        scrape_events.fetch_html = lambda url: pages[url]
+        try:
+            events = scrape_source(source)
+        finally:
+            scrape_events.fetch_html = original_fetch_html
+
+        self.assertEqual(2, len(events))
+        self.assertEqual("GoldFord", events[0]["bands"])
+        self.assertEqual("2026-09-20", events[0]["date"])
+        self.assertEqual("Manual Fallback Band", events[1]["bands"])
+        self.assertEqual("TBA", events[1]["date"])
+
     def test_extract_event_nodes_from_jsonld(self):
         html = '''
         <html><body>
