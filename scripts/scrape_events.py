@@ -30,11 +30,11 @@ SOURCES = [
 ]
 
 SCRIPT_TAG_PATTERN = re.compile(
-    r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
+    r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script\s*>",
     flags=re.IGNORECASE | re.DOTALL,
 )
 INLINE_SCRIPT_PATTERN = re.compile(
-    r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>",
+    r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script\s*>",
     flags=re.IGNORECASE | re.DOTALL,
 )
 
@@ -91,9 +91,21 @@ def _is_event_node(node: dict[str, Any]) -> bool:
     elif node_type == "Event":
         return True
 
-    has_date = any(isinstance(node.get(key), str) and node.get(key).strip() for key in EVENT_DATE_KEYS)
-    has_name = any(isinstance(node.get(key), str) and node.get(key).strip() for key in EVENT_NAME_KEYS)
-    has_url = any(isinstance(node.get(key), str) and node.get(key).strip() for key in EVENT_URL_KEYS)
+    has_date = any(
+        isinstance(value, str) and value.strip()
+        for key in EVENT_DATE_KEYS
+        for value in [node.get(key)]
+    )
+    has_name = any(
+        isinstance(value, str) and value.strip()
+        for key in EVENT_NAME_KEYS
+        for value in [node.get(key)]
+    )
+    has_url = any(
+        isinstance(value, str) and value.strip()
+        for key in EVENT_URL_KEYS
+        for value in [node.get(key)]
+    )
     return has_date and has_name and has_url
 
 
