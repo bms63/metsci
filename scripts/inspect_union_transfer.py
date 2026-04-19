@@ -6,8 +6,14 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
+import urllib.error
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.scrape_events import _find_union_transfer_event_links, _iter_json_fragments, fetch_html
 
@@ -294,15 +300,21 @@ def main() -> None:
         list_event_links = True
         find_terms = ["event_id", "startDate", "performer"]
 
-    payload = inspect_url(
-        url=args.url,
-        show_scripts=show_scripts,
-        script_indexes=args.script_index,
-        find_terms=find_terms,
-        list_event_links=list_event_links,
-        context=args.context,
-        max_preview=args.max_preview,
-    )
+    try:
+        payload = inspect_url(
+            url=args.url,
+            show_scripts=show_scripts,
+            script_indexes=args.script_index,
+            find_terms=find_terms,
+            list_event_links=list_event_links,
+            context=args.context,
+            max_preview=args.max_preview,
+        )
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
+        payload = {
+            "url": args.url,
+            "error": str(exc),
+        }
 
     print(json.dumps(payload, indent=2, ensure_ascii=False))
 
