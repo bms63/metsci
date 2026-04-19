@@ -167,6 +167,7 @@ def _event_from_node(node: dict[str, Any], source: dict[str, str], default_link:
 def _scrape_union_transfer_events(source: dict[str, str], calendar_html: str) -> list[dict[str, str]]:
     events: list[dict[str, str]] = []
     seen_links: set[str] = set()
+    processed_detail_links: set[str] = set()
 
     for node in extract_event_nodes(calendar_html):
         event = _event_from_node(node, source)
@@ -176,8 +177,9 @@ def _scrape_union_transfer_events(source: dict[str, str], calendar_html: str) ->
 
     detail_links = _find_union_transfer_event_links(calendar_html, source["url"])
     for detail_link in detail_links:
-        if detail_link in seen_links:
+        if detail_link in processed_detail_links:
             continue
+        processed_detail_links.add(detail_link)
 
         detail_html = fetch_html(detail_link)
         detail_nodes = extract_event_nodes(detail_html)
@@ -192,7 +194,6 @@ def _scrape_union_transfer_events(source: dict[str, str], calendar_html: str) ->
 
         fallback_title = _extract_h2_title(detail_html)
         if fallback_title:
-            seen_links.add(detail_link)
             events.append(
                 {
                     "date": "TBA",
