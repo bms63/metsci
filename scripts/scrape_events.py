@@ -99,6 +99,7 @@ def _is_event_node(node: dict[str, Any]) -> bool:
 
 def extract_event_nodes(html: str) -> list[dict[str, Any]]:
     event_nodes: list[dict[str, Any]] = []
+    seen_nodes: set[str] = set()
     raw_blocks = SCRIPT_TAG_PATTERN.findall(html) + INLINE_SCRIPT_PATTERN.findall(html)
     for raw_block in raw_blocks:
         block = raw_block.strip()
@@ -114,6 +115,10 @@ def extract_event_nodes(html: str) -> list[dict[str, Any]]:
         for parsed in parsed_blocks:
             for node in _iter_json_objects(parsed):
                 if _is_event_node(node):
+                    marker = json.dumps(node, sort_keys=True, default=str)
+                    if marker in seen_nodes:
+                        continue
+                    seen_nodes.add(marker)
                     event_nodes.append(node)
     return event_nodes
 
