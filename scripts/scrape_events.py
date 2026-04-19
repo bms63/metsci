@@ -30,11 +30,11 @@ SOURCES = [
 ]
 
 SCRIPT_TAG_PATTERN = re.compile(
-    r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script\s*>",
+    r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script[^>]*>",
     flags=re.IGNORECASE | re.DOTALL,
 )
 INLINE_SCRIPT_PATTERN = re.compile(
-    r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script\s*>",
+    r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script[^>]*>",
     flags=re.IGNORECASE | re.DOTALL,
 )
 
@@ -91,28 +91,34 @@ def _is_event_node(node: dict[str, Any]) -> bool:
     elif node_type == "Event":
         return True
 
-    has_date = any(
-        isinstance(value, str) and value.strip()
-        for key in EVENT_DATE_KEYS
-        for value in [node.get(key)]
-    )
-    has_name = any(
-        isinstance(value, str) and value.strip()
-        for key in EVENT_NAME_KEYS
-        for value in [node.get(key)]
-    )
-    has_url = any(
-        isinstance(value, str) and value.strip()
-        for key in EVENT_URL_KEYS
-        for value in [node.get(key)]
-    )
+    def has_nonempty_string_value(keys: tuple[str, ...]) -> bool:
+        for key in keys:
+            value = node.get(key)
+            if isinstance(value, str) and value.strip():
+                return True
+        return False
+
+    has_date = has_nonempty_string_value(EVENT_DATE_KEYS)
+    has_name = has_nonempty_string_value(EVENT_NAME_KEYS)
+    has_url = has_nonempty_string_value(EVENT_URL_KEYS)
     return has_date and has_name and has_url
+
+
+def _event_marker(node: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        node.get("name") or node.get("title") or node.get("eventName"),
+        node.get("startDate") or node.get("start_date") or node.get("eventDate") or node.get("showDate"),
+        node.get("url") or node.get("link") or node.get("eventUrl") or node.get("permalink"),
+    )
 
 
 def extract_event_nodes(html: str) -> list[dict[str, Any]]:
     event_nodes: list[dict[str, Any]] = []
-    seen_nodes: set[str] = set()
-    raw_blocks = SCRIPT_TAG_PATTERN.findall(html) + INLINE_SCRIPT_PATTERN.findall(html)
+    seen_nodes: set[tuple[Any, ...]] = set()
+    raw_blocks = SCRIPT_TAG_PATTERN.findall(html)
+    for script_block in INLINE_SCRIPT_PATTERN.findall(html):
+        if re.search(r"\b(event|startDate|start_date|showDate)\b", script_block, flags=re.IGNORECASE):
+            raw_blocks.append(script_block)
     for raw_block in raw_blocks:
         block = raw_block.strip()
         if not block:
@@ -127,7 +133,7 @@ def extract_event_nodes(html: str) -> list[dict[str, Any]]:
         for parsed in parsed_blocks:
             for node in _iter_json_objects(parsed):
                 if _is_event_node(node):
-                    marker = json.dumps(node, sort_keys=True, default=str)
+                    marker = _event_marker(node)
                     if marker in seen_nodes:
                         continue
                     seen_nodes.add(marker)
