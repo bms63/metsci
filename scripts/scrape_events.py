@@ -4,15 +4,18 @@
 from __future__ import annotations
 
 import json
+import csv
 import re
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from html import unescape
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin
 
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "events.json"
+CSV_FILE = Path(__file__).resolve().parent.parent / "raw-data" / "events.csv"
 
 SOURCES = [
     {
@@ -42,9 +45,20 @@ EVENT_KEYWORD_PATTERN = re.compile(
     flags=re.IGNORECASE,
 )
 
-EVENT_DATE_KEYS = ("startDate", "start_date", "eventDate", "showDate")
-EVENT_NAME_KEYS = ("name", "title", "eventName")
-EVENT_URL_KEYS = ("url", "link", "eventUrl", "permalink")
+EVENT_DATE_KEYS = (
+    "startDate",
+    "start_date",
+    "eventDate",
+    "event_date",
+    "eventDateLocal",
+    "showDate",
+    "date",
+    "dateTime",
+    "startsAt",
+    "start",
+)
+EVENT_NAME_KEYS = ("name", "title", "eventName", "event_name", "headline", "artist")
+EVENT_URL_KEYS = ("url", "link", "eventUrl", "event_url", "permalink", "eventLink")
 
 
 def fetch_html(url: str) -> str:
@@ -71,6 +85,35 @@ def _first_nonempty_string(node: dict[str, Any], keys: tuple[str, ...]) -> str:
         value = node.get(key)
         if isinstance(value, str) and value.strip():
             return value
+    return ""
+
+
+def _first_nonempty_nested_string(node: dict[str, Any], keys: tuple[str, ...]) -> str:
+    for nested in _iter_json_objects(node):
+        if isinstance(nested, dict):
+            value = _first_nonempty_string(nested, keys)
+            if value:
+                return value
+    return ""
+
+
+def _extract_link(node: dict[str, Any], source_url: str) -> str:
+    direct_link = _first_nonempty_nested_string(node, EVENT_URL_KEYS)
+    if direct_link:
+        return urljoin(source_url, direct_link)
+
+    offer = node.get("offers")
+    if isinstance(offer, dict):
+        offer_url = _first_nonempty_string(offer, ("url", "link"))
+        if offer_url:
+            return urljoin(source_url, offer_url)
+    elif isinstance(offer, list):
+        for entry in offer:
+            if isinstance(entry, dict):
+                offer_url = _first_nonempty_string(entry, ("url", "link"))
+                if offer_url:
+                    return urljoin(source_url, offer_url)
+
     return ""
 
 
@@ -106,6 +149,8 @@ def _is_event_node(node: dict[str, Any]) -> bool:
     has_date = bool(_first_nonempty_string(node, EVENT_DATE_KEYS))
     has_name = bool(_first_nonempty_string(node, EVENT_NAME_KEYS))
     has_url = bool(_first_nonempty_string(node, EVENT_URL_KEYS))
+    if not has_url and isinstance(node.get("offers"), (dict, list)):
+        has_url = bool(_extract_link(node, ""))
     return has_date and has_name and has_url
 
 
@@ -147,6 +192,15 @@ def extract_event_nodes(html: str) -> list[dict[str, Any]]:
 
 
 def normalize_date(raw_date: Any) -> str:
+    if isinstance(raw_date, (int, float)):
+        timestamp = float(raw_date)
+        if timestamp > 1_000_000_000_000:
+            timestamp /= 1000.0
+        try:
+            return datetime.fromtimestamp(timestamp, tz=timezone.utc).date().isoformat()
+        except (ValueError, OSError, OverflowError):
+            return "TBA"
+
     if not isinstance(raw_date, str) or not raw_date.strip():
         return "TBA"
     value = raw_date.strip()
@@ -174,7 +228,7 @@ def extract_band_names(node: dict[str, Any]) -> str:
         if isinstance(candidate, str) and candidate.strip():
             if is_organization_placeholder(candidate):
                 return
-            names.append(candidate.strip())
+            names.append(unescape(candidate.strip()))
         elif isinstance(candidate, dict):
             # Skip Organization-typed entries – these are venues/promoters, not acts.
             candidate_type = candidate.get("@type")
@@ -186,7 +240,7 @@ def extract_band_names(node: dict[str, Any]) -> str:
             if isinstance(name, str) and name.strip():
                 if is_organization_placeholder(name):
                     return
-                names.append(name.strip())
+                names.append(unescape(name.strip()))
 
     if isinstance(performers, list):
         for performer in performers:
@@ -204,7 +258,7 @@ def extract_band_names(node: dict[str, Any]) -> str:
     if not isinstance(title, str) or not title.strip():
         title = node.get("title")
     if isinstance(title, str) and title.strip():
-        return title.strip()
+        return unescape(title.strip())
 
     return "TBA"
 
@@ -214,21 +268,17 @@ def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
     events: list[dict[str, str]] = []
 
     for node in extract_event_nodes(html):
-        event_url: Any = _first_nonempty_string(node, EVENT_URL_KEYS)
-        if isinstance(event_url, str):
-            link = urljoin(source["url"], event_url)
-        else:
-            offer = node.get("offers")
-            link = ""
-            if isinstance(offer, dict) and isinstance(offer.get("url"), str):
-                link = urljoin(source["url"], offer["url"])
+        link = _extract_link(node, source["url"])
 
         raw_start_date: Any = _first_nonempty_string(node, EVENT_DATE_KEYS)
+        bands = _first_nonempty_string(node, EVENT_NAME_KEYS)
+        if not bands:
+            bands = extract_band_names(node)
 
         events.append(
             {
                 "date": normalize_date(raw_start_date),
-                "bands": extract_band_names(node),
+                "bands": bands,
                 "venue": source["venue"],
                 "link": link,
             }
@@ -253,6 +303,14 @@ def load_existing_events() -> list[dict[str, str]]:
 
     events = payload.get("events")
     return events if isinstance(events, list) else []
+
+
+def write_csv(events: list[dict[str, str]]) -> None:
+    CSV_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with CSV_FILE.open("w", encoding="utf-8", newline="") as file_obj:
+        writer = csv.DictWriter(file_obj, fieldnames=["date", "bands", "venue", "link"])
+        writer.writeheader()
+        writer.writerows(events)
 
 
 def main() -> None:
@@ -285,6 +343,7 @@ def main() -> None:
 
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     DATA_FILE.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    write_csv(all_events)
 
 
 if __name__ == "__main__":
