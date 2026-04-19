@@ -97,6 +97,7 @@ def extract_band_names(node: dict[str, Any]) -> str:
     names: list[str] = []
 
     def is_organization_placeholder(value: str) -> bool:
+        """Detect Underground Arts placeholder performer labels."""
         return value.strip().lower() == "organization"
 
     def add_name(candidate: Any):
