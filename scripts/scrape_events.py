@@ -30,9 +30,21 @@ SOURCES = [
 ]
 
 SCRIPT_TAG_PATTERN = re.compile(
-    r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
+    r"<script[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script[^>]*>",
     flags=re.IGNORECASE | re.DOTALL,
 )
+INLINE_SCRIPT_PATTERN = re.compile(
+    r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script[^>]*>",
+    flags=re.IGNORECASE | re.DOTALL,
+)
+EVENT_KEYWORD_PATTERN = re.compile(
+    r"\b(event|startDate|start_date|showDate)\b",
+    flags=re.IGNORECASE,
+)
+
+EVENT_DATE_KEYS = ("startDate", "start_date", "eventDate", "showDate")
+EVENT_NAME_KEYS = ("name", "title", "eventName")
+EVENT_URL_KEYS = ("url", "link", "eventUrl", "permalink")
 
 
 def fetch_html(url: str) -> str:
@@ -54,25 +66,83 @@ def _iter_json_objects(value: Any):
             yield from _iter_json_objects(item)
 
 
+def _first_nonempty_string(node: dict[str, Any], keys: tuple[str, ...]) -> str:
+    for key in keys:
+        value = node.get(key)
+        if isinstance(value, str) and value.strip():
+            return value
+    return ""
+
+
+def _iter_json_fragments(text: str):
+    decoder = json.JSONDecoder()
+    index = 0
+    text_length = len(text)
+
+    while index < text_length:
+        char = text[index]
+        if char not in "{[":
+            index += 1
+            continue
+
+        try:
+            parsed, consumed = decoder.raw_decode(text[index:])
+        except json.JSONDecodeError:
+            index += 1
+            continue
+
+        yield parsed
+        index += consumed
+
+
+def _is_event_node(node: dict[str, Any]) -> bool:
+    node_type = node.get("@type")
+    if isinstance(node_type, list):
+        if "Event" in node_type:
+            return True
+    elif node_type == "Event":
+        return True
+
+    has_date = bool(_first_nonempty_string(node, EVENT_DATE_KEYS))
+    has_name = bool(_first_nonempty_string(node, EVENT_NAME_KEYS))
+    has_url = bool(_first_nonempty_string(node, EVENT_URL_KEYS))
+    return has_date and has_name and has_url
+
+
+def _event_marker(node: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        _first_nonempty_string(node, EVENT_NAME_KEYS),
+        _first_nonempty_string(node, EVENT_DATE_KEYS),
+        _first_nonempty_string(node, EVENT_URL_KEYS),
+    )
+
+
 def extract_event_nodes(html: str) -> list[dict[str, Any]]:
     event_nodes: list[dict[str, Any]] = []
-    for raw_block in SCRIPT_TAG_PATTERN.findall(html):
+    seen_nodes: set[tuple[Any, ...]] = set()
+    raw_blocks = SCRIPT_TAG_PATTERN.findall(html)
+    for script_block in INLINE_SCRIPT_PATTERN.findall(html):
+        if EVENT_KEYWORD_PATTERN.search(script_block):
+            raw_blocks.append(script_block)
+    for raw_block in raw_blocks:
         block = raw_block.strip()
         if not block:
             continue
-        try:
-            parsed = json.loads(block)
-        except json.JSONDecodeError:
-            continue
 
-        for node in _iter_json_objects(parsed):
-            node_type = node.get("@type")
-            if isinstance(node_type, list):
-                is_event = "Event" in node_type
-            else:
-                is_event = node_type == "Event"
-            if is_event:
-                event_nodes.append(node)
+        parsed_blocks: list[Any] = []
+        try:
+            parsed_blocks.append(json.loads(block))
+        except json.JSONDecodeError:
+            parsed_blocks.extend(_iter_json_fragments(block))
+
+        for parsed in parsed_blocks:
+            for node in _iter_json_objects(parsed):
+                if _is_event_node(node):
+                    marker = _event_marker(node)
+                    if marker in seen_nodes:
+                        continue
+                    seen_nodes.add(marker)
+                    event_nodes.append(node)
     return event_nodes
 
 
@@ -131,6 +201,8 @@ def extract_band_names(node: dict[str, Any]) -> str:
     # Fall back to the event's own name (e.g. show title) when performer data
     # is absent or was entirely made up of Organization placeholders.
     title = node.get("name")
+    if not isinstance(title, str) or not title.strip():
+        title = node.get("title")
     if isinstance(title, str) and title.strip():
         return title.strip()
 
@@ -142,7 +214,7 @@ def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
     events: list[dict[str, str]] = []
 
     for node in extract_event_nodes(html):
-        event_url = node.get("url")
+        event_url: Any = _first_nonempty_string(node, EVENT_URL_KEYS)
         if isinstance(event_url, str):
             link = urljoin(source["url"], event_url)
         else:
@@ -151,9 +223,11 @@ def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
             if isinstance(offer, dict) and isinstance(offer.get("url"), str):
                 link = urljoin(source["url"], offer["url"])
 
+        raw_start_date: Any = _first_nonempty_string(node, EVENT_DATE_KEYS)
+
         events.append(
             {
-                "date": normalize_date(node.get("startDate")),
+                "date": normalize_date(raw_start_date),
                 "bands": extract_band_names(node),
                 "venue": source["venue"],
                 "link": link,

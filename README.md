@@ -16,5 +16,5 @@ Then open `http://localhost:8000`.
 
 ## Automation
 
-- `.github/workflows/refresh-events.yml` scrapes weekly (Mondays) and commits `data/events.json`.
+- `.github/workflows/refresh-events.yml` scrapes weekly (Mondays), runs on pull requests, and commits `data/events.json` for non-PR runs.
 - `.github/workflows/deploy-pages.yml` deploys the static site to GitHub Pages.
