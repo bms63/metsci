@@ -96,15 +96,26 @@ def extract_band_names(node: dict[str, Any]) -> str:
     performers = node.get("performer")
     names: list[str] = []
 
+    def is_organization_placeholder(value: str) -> bool:
+        """Detect Underground Arts placeholder performer labels."""
+        return value.strip().lower() == "organization"
+
     def add_name(candidate: Any):
         if isinstance(candidate, str) and candidate.strip():
+            if is_organization_placeholder(candidate):
+                return
             names.append(candidate.strip())
         elif isinstance(candidate, dict):
             # Skip Organization-typed entries – these are venues/promoters, not acts.
-            if candidate.get("@type") == "Organization":
+            candidate_type = candidate.get("@type")
+            if candidate_type == "Organization" or (
+                isinstance(candidate_type, list) and "Organization" in candidate_type
+            ):
                 return
             name = candidate.get("name")
             if isinstance(name, str) and name.strip():
+                if is_organization_placeholder(name):
+                    return
                 names.append(name.strip())
 
     if isinstance(performers, list):
