@@ -48,6 +48,20 @@ class ScrapeEventsTests(unittest.TestCase):
         }
         self.assertEqual("The Real Band", extract_band_names(node))
 
+    def test_extract_band_names_skips_organization_placeholder_string(self):
+        node = {
+            "name": "Chameleons",
+            "performer": "Organization",
+        }
+        self.assertEqual("Chameleons", extract_band_names(node))
+
+    def test_extract_band_names_skips_organization_placeholder_name_without_type(self):
+        node = {
+            "name": "Pallbearer",
+            "performer": {"name": "Organization"},
+        }
+        self.assertEqual("Pallbearer", extract_band_names(node))
+
     def test_extract_band_names_falls_back_to_event_name_when_no_performers(self):
         node = {"name": "Show Title"}
         self.assertEqual("Show Title", extract_band_names(node))
