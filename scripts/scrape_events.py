@@ -66,6 +66,14 @@ def _iter_json_objects(value: Any):
             yield from _iter_json_objects(item)
 
 
+def _first_nonempty_string(node: dict[str, Any], keys: tuple[str, ...]) -> str:
+    for key in keys:
+        value = node.get(key)
+        if isinstance(value, str) and value.strip():
+            return value
+    return ""
+
+
 def _iter_json_fragments(text: str):
     decoder = json.JSONDecoder()
     index = 0
@@ -95,24 +103,17 @@ def _is_event_node(node: dict[str, Any]) -> bool:
     elif node_type == "Event":
         return True
 
-    def has_nonempty_string_value(keys: tuple[str, ...]) -> bool:
-        for key in keys:
-            value = node.get(key)
-            if isinstance(value, str) and value.strip():
-                return True
-        return False
-
-    has_date = has_nonempty_string_value(EVENT_DATE_KEYS)
-    has_name = has_nonempty_string_value(EVENT_NAME_KEYS)
-    has_url = has_nonempty_string_value(EVENT_URL_KEYS)
+    has_date = bool(_first_nonempty_string(node, EVENT_DATE_KEYS))
+    has_name = bool(_first_nonempty_string(node, EVENT_NAME_KEYS))
+    has_url = bool(_first_nonempty_string(node, EVENT_URL_KEYS))
     return has_date and has_name and has_url
 
 
 def _event_marker(node: dict[str, Any]) -> tuple[Any, ...]:
     return (
-        node.get("name") or node.get("title") or node.get("eventName"),
-        node.get("startDate") or node.get("start_date") or node.get("eventDate") or node.get("showDate"),
-        node.get("url") or node.get("link") or node.get("eventUrl") or node.get("permalink"),
+        _first_nonempty_string(node, EVENT_NAME_KEYS),
+        _first_nonempty_string(node, EVENT_DATE_KEYS),
+        _first_nonempty_string(node, EVENT_URL_KEYS),
     )
 
 
@@ -213,12 +214,7 @@ def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
     events: list[dict[str, str]] = []
 
     for node in extract_event_nodes(html):
-        event_url: Any = None
-        for url_key in EVENT_URL_KEYS:
-            candidate = node.get(url_key)
-            if isinstance(candidate, str) and candidate.strip():
-                event_url = candidate
-                break
+        event_url: Any = _first_nonempty_string(node, EVENT_URL_KEYS)
         if isinstance(event_url, str):
             link = urljoin(source["url"], event_url)
         else:
@@ -227,12 +223,7 @@ def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
             if isinstance(offer, dict) and isinstance(offer.get("url"), str):
                 link = urljoin(source["url"], offer["url"])
 
-        raw_start_date: Any = None
-        for date_key in EVENT_DATE_KEYS:
-            candidate = node.get(date_key)
-            if candidate:
-                raw_start_date = candidate
-                break
+        raw_start_date: Any = _first_nonempty_string(node, EVENT_DATE_KEYS)
 
         events.append(
             {
