@@ -43,6 +43,43 @@ class ScrapeEventsTests(unittest.TestCase):
         self.assertEqual(2, len(events))
         self.assertEqual("Show One", events[0]["title"])
 
+    def test_extract_event_nodes_with_nested_event_fields(self):
+        html = """
+        <html><body>
+          <script>
+            window.__DATA__ = {
+              "calendar": [{
+                "event": {
+                  "headline": "Nested Show",
+                  "eventDateLocal": "2026-08-01T20:00:00-04:00",
+                  "eventLink": "/events/nested-show"
+                }
+              }]
+            };
+          </script>
+        </body></html>
+        """
+        events = extract_event_nodes(html)
+        self.assertEqual(1, len(events))
+        self.assertEqual("Nested Show", events[0]["headline"])
+
+    def test_extract_event_nodes_with_offer_url_only(self):
+        html = """
+        <html><body>
+          <script type="application/ld+json">
+            {
+              "@type": "Event",
+              "name": "Offer URL Show",
+              "startDate": "2026-06-02",
+              "offers": [{"url": "/tickets/offer-url-show"}]
+            }
+          </script>
+        </body></html>
+        """
+        events = extract_event_nodes(html)
+        self.assertEqual(1, len(events))
+        self.assertEqual("Offer URL Show", events[0]["name"])
+
     def test_extract_band_names_skips_organization_type(self):
         """Performer entries typed as Organization (venue placeholders) should be
         ignored so the function falls back to the event's own name."""
@@ -88,6 +125,7 @@ class ScrapeEventsTests(unittest.TestCase):
     def test_normalize_date(self):
         self.assertEqual("2026-05-01", normalize_date("2026-05-01T20:00:00-04:00"))
         self.assertEqual("2026-07-09", normalize_date("2026-07-09"))
+        self.assertEqual("2024-07-03", normalize_date(1720000000))
         self.assertEqual("TBA", normalize_date(None))
 
 

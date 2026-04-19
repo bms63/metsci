@@ -24,8 +24,8 @@ jobs:
         run: python scripts/scrape_events.py
 
       - name: Commit updated data
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: refresh scraped events'
-          file_pattern: data/events.json
+          file_pattern: data/events.json raw-data/events.csv
