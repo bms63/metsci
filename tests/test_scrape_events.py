@@ -55,7 +55,7 @@ class ScrapeEventsTests(unittest.TestCase):
         }
         self.assertEqual("Chameleons", extract_band_names(node))
 
-    def test_extract_band_names_skips_organization_placeholder_name_without_type(self):
+    def test_extract_band_names_skips_organization_placeholder_dict(self):
         node = {
             "name": "Pallbearer",
             "performer": {"name": "Organization"},
