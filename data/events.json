@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T19:21:33.692324+00:00",
+  "generated_at": "2026-04-20T12:20:37.183858+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -16,18 +16,6 @@
   ],
   "events": [
     {
-      "date": "2026-04-19",
-      "bands": "FEID vs FERXXO: Falxo Tour - El Mano a Mano Del A\u00f1o",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/feid-vs-ferxxo-falxo-tour-el-philadelphia-pennsylvania-04-19-2026/event/02006474F98B9620"
-    },
-    {
-      "date": "2026-04-19",
-      "bands": "together PANGEA & The Red Pears",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/together-pangea-the-red-pears-philadelphia-pennsylvania-04-19-2026/event/02006392EC31F2B5"
-    },
-    {
       "date": "2026-04-20",
       "bands": "Good Kid - Can We Hang Out? Tour",
       "venue": "The Fillmore",
@@ -38,12 +26,6 @@
       "bands": "Wallice",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/wallice-philadelphia-pennsylvania-04-20-2026/event/02006381C9FAAD9A"
-    },
-    {
-      "date": "2026-04-20",
-      "bands": "Frog",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-frog-176989"
     },
     {
       "date": "2026-04-21",
@@ -335,6 +317,12 @@
     },
     {
       "date": "2026-05-17",
+      "bands": "August Burns Red & The Amity Affliction: The Springs Horizons Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/august-burns-red-the-amity-affliction-philadelphia-pennsylvania-05-17-2026/event/02006375DA8856A7"
+    },
+    {
+      "date": "2026-05-17",
       "bands": "Infected Rain",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/infected-rain-168934"
@@ -344,6 +332,12 @@
       "bands": "Failure",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/failure-177100"
+    },
+    {
+      "date": "2026-05-19",
+      "bands": "Marina Satti",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/marina-satti-philadelphia-pennsylvania-05-19-2026/event/020062A9F6188507"
     },
     {
       "date": "2026-05-19",
