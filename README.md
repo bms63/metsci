@@ -20,13 +20,33 @@ Then open `http://localhost:8000`.
 Use this script to inspect page sections and locate where show/event data lives:
 
 ```bash
+# Default run – shows scripts, event links, HTML event elements, API patterns, and text matches
 python scripts/inspect_union_transfer.py
+
+# List all script blocks with event-keyword hints
+python scripts/inspect_union_transfer.py --show-scripts
+
+# Inspect a specific script block by index (from --show-scripts output)
 python scripts/inspect_union_transfer.py --show-scripts --script-index 3
+
+# Search text around specific keywords
 python scripts/inspect_union_transfer.py --url https://www.utphilly.com/events/detail/?event_id=1146309 --find startDate --find performer
+
+# Extract /events/detail/?event_id=... links
 python scripts/inspect_union_transfer.py --list-event-links
+
+# Scan HTML tags for elements whose class names / data-attributes suggest events
+python scripts/inspect_union_transfer.py --show-html-events
+
+# Scan scripts for fetch/XHR/axios calls, API config URLs, and window.* assignments
+python scripts/inspect_union_transfer.py --show-api-patterns
+
+# Save the raw HTML for offline inspection (useful when the site uses JS rendering)
+python scripts/inspect_union_transfer.py --dump-html /tmp/utphilly_calendar.html
 ```
 
-It prints JSON with script summaries, extracted event detail links, optional text match snippets, and parsed event-like JSON nodes.
+It prints JSON with script summaries, extracted event detail links, HTML event elements,
+API/network-call patterns, optional text match snippets, and parsed event-like JSON nodes.
 
 ## Automation
 
