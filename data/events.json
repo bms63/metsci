@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:27:57.269823+00:00",
+  "generated_at": "2026-05-01T22:12:05.617941+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,36 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-04-27",
-      "bands": "Daya - Til Every Petal Drops Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/daya-til-every-petal-drops-tour-philadelphia-pennsylvania-04-27-2026/event/020064430D6DE247"
-    },
-    {
-      "date": "2026-04-28",
-      "bands": "Gatecreeper",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/gatecreeper-philadelphia-pennsylvania-04-28-2026/event/0200645ADC69455C"
-    },
-    {
-      "date": "2026-04-28",
-      "bands": "The Nude Party",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-nude-party-161547"
-    },
-    {
-      "date": "2026-04-30",
-      "bands": "Alyssa Edwards - Thanks For Everything Tour 2026",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/alyssa-edwards-thanks-for-everything-tour-philadelphia-pennsylvania-04-30-2026/event/02006436B85EB668"
-    },
-    {
-      "date": "2026-04-30",
-      "bands": "Red Rum Club",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/red-rum-club-philadelphia-pennsylvania-04-30-2026/event/0200636AD738DF55"
-    },
     {
       "date": "2026-05-01",
       "bands": "Arkells",
@@ -125,9 +95,9 @@
     },
     {
       "date": "2026-05-09",
-      "bands": "Inner Wave & Los Mesoneros - North America Tour '26",
+      "bands": "Inner Wave - North America Tour '26",
       "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/inner-wave-los-mesoneros-north-america-philadelphia-pennsylvania-05-09-2026/event/02006427A4787279"
+      "link": "https://www.ticketmaster.com/inner-wave-north-america-tour-26-philadelphia-pennsylvania-05-09-2026/event/02006427A4787279"
     },
     {
       "date": "2026-05-09",
@@ -145,7 +115,7 @@
       "date": "2026-05-11",
       "bands": "JAY ELECTRONICA",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/jay-electronica-181740"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-jay-electronica-181740"
     },
     {
       "date": "2026-05-12",
@@ -335,12 +305,6 @@
     },
     {
       "date": "2026-05-31",
-      "bands": "Chrisette Michele Grounding Room Only Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/chrisette-michele-grounding-room-only-tour-philadelphia-pennsylvania-05-31-2026/event/0200644BED81D91F"
-    },
-    {
-      "date": "2026-05-31",
       "bands": "WXPN Welcomes: Ben Folds & A Piano Tour",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/wxpn-welcomes-ben-folds-a-piano-philadelphia-pennsylvania-05-31-2026/event/0200646BB1CFC6A2"
@@ -377,15 +341,45 @@
     },
     {
       "date": "2026-06-06",
+      "bands": "BabyFxce E - Be Da Realest Tour 2026",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/babyfxce-e-be-da-realest-tour-philadelphia-pennsylvania-06-06-2026/event/0200646A8E355CE7"
+    },
+    {
+      "date": "2026-06-06",
       "bands": "Stygian Bough: Bell Witch &amp; Aerial Ruin",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-stygian-bough-bell-witch-aerial-ruin-184894"
     },
     {
       "date": "2026-06-07",
+      "bands": "ECHO & THE BUNNYMEN: More Songs To Learn & Sing",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/echo-the-bunnymen-more-songs-to-philadelphia-pennsylvania-06-07-2026/event/0200634F937780CD"
+    },
+    {
+      "date": "2026-06-07",
+      "bands": "Old Mervs",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/old-mervs-philadelphia-pennsylvania-06-07-2026/event/0200644DBBFDF44F"
+    },
+    {
+      "date": "2026-06-07",
       "bands": "Pancakes &amp; Booze: Philadelphia Art Show",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/pancakes-booze-philadelphia-art-show-179700"
+    },
+    {
+      "date": "2026-06-08",
+      "bands": "Dess Dior - Take Notes Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/dess-dior-take-notes-tour-philadelphia-pennsylvania-06-08-2026/event/02006491C43293B5"
+    },
+    {
+      "date": "2026-06-09",
+      "bands": "Meet Me @ The Altar - The Worried Sick Summer Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/meet-me-the-altar-the-worried-philadelphia-pennsylvania-06-09-2026/event/02006482FA346E3B"
     },
     {
       "date": "2026-06-11",
@@ -448,6 +442,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-strike-180197"
     },
     {
+      "date": "2026-07-18",
+      "bands": "The Frights",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-frights-186696"
+    },
+    {
       "date": "2026-07-24",
       "bands": "Man Man",
       "venue": "Underground Arts",
@@ -464,6 +464,12 @@
       "bands": "The California Honeydrops",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-california-honeydrops-175868"
+    },
+    {
+      "date": "2026-08-14",
+      "bands": "HAYLA",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-hayla-186636"
     },
     {
       "date": "2026-08-16",
