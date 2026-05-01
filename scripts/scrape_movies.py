@@ -11,6 +11,7 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urljoin
 
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "movies.json"
 CSV_FILE = Path(__file__).resolve().parent.parent / "raw-data" / "movies.csv"
@@ -108,7 +109,7 @@ def normalize_date(raw: Any) -> str:
         return parsed.date().isoformat()
     except ValueError:
         m = re.match(r"^(\d{4}-\d{2}-\d{2})", value)
-        return m.group(1) if m else value
+        return m.group(1) if m else "TBA"
 
 
 def _extract_genre(node: dict[str, Any]) -> str:
@@ -153,21 +154,18 @@ def _extract_link(node: dict[str, Any]) -> str:
     for key in MOVIE_URL_KEYS:
         v = node.get(key)
         if isinstance(v, str) and v.strip():
-            link = v.strip()
-            if not link.startswith("http"):
-                link = "https://www.landmarktheatres.com" + link
-            return link
+            return urljoin(BASE_URL, v.strip())
     offers = node.get("offers")
     if isinstance(offers, dict):
         v = offers.get("url") or offers.get("link")
         if isinstance(v, str) and v.strip():
-            return v.strip()
+            return urljoin(BASE_URL, v.strip())
     if isinstance(offers, list):
         for offer in offers:
             if isinstance(offer, dict):
                 v = offer.get("url") or offer.get("link")
                 if isinstance(v, str) and v.strip():
-                    return v.strip()
+                    return urljoin(BASE_URL, v.strip())
     return ""
 
 
@@ -293,7 +291,7 @@ def scrape_all_dates() -> tuple[list[dict[str, str]], list[str]]:
         try:
             html = fetch_html(f"{BASE_URL}?date={date_str}")
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
-            errors.append(f"{date_str}: {exc}")
+            errors.append(f"{date_str}: {type(exc).__name__}: {exc}")
             empty_streak += 1
             if empty_streak >= MAX_EMPTY_DAYS:
                 break

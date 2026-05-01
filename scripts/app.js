@@ -192,7 +192,7 @@ async function loadMovies() {
       moviesAlertElement.textContent = 'Last scraped: unknown';
     }
   } catch (error) {
-    const hint = error.message.toLowerCase().includes('failed to fetch') || error.message === 'failed to fetch'
+    const hint = error.message.toLowerCase().includes('failed to fetch')
       ? ' – open the site via a local HTTP server (e.g. python -m http.server 8000) rather than directly from the filesystem'
       : '';
     moviesAlertElement.textContent = `Unable to load movie data (${error.message})${hint}.`;
