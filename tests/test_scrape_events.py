@@ -5,6 +5,7 @@ from scripts.scrape_events import (
     _find_union_transfer_event_links,
     extract_event_nodes,
     extract_band_names,
+    fetch_html_with_browser,
     normalize_date,
     scrape_source,
 )
@@ -181,6 +182,22 @@ class ScrapeEventsTests(unittest.TestCase):
         self.assertEqual("2026-07-09", normalize_date("2026-07-09"))
         self.assertEqual("2024-07-03", normalize_date(1720000000))
         self.assertEqual("TBA", normalize_date(None))
+
+    def test_fetch_html_with_browser_fallback_without_playwright(self):
+        """When Playwright is not installed, fetch_html_with_browser delegates to fetch_html."""
+        captured = []
+        original_fetch_html = scrape_events.fetch_html
+        original_playwright_flag = scrape_events._PLAYWRIGHT_AVAILABLE
+        scrape_events.fetch_html = lambda url: captured.append(url) or "<html/>"
+        scrape_events._PLAYWRIGHT_AVAILABLE = False
+        try:
+            result = fetch_html_with_browser("https://example.com/")
+        finally:
+            scrape_events.fetch_html = original_fetch_html
+            scrape_events._PLAYWRIGHT_AVAILABLE = original_playwright_flag
+
+        self.assertEqual(["https://example.com/"], captured)
+        self.assertEqual("<html/>", result)
 
 
 if __name__ == '__main__':

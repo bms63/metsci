@@ -14,6 +14,15 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin
 
+# Playwright is an optional dependency used for JS-rendered pages (Union Transfer).
+# When not installed, the scraper falls back to urllib (which returns a shell for SPAs).
+try:
+    from playwright.sync_api import sync_playwright as _sync_playwright
+
+    _PLAYWRIGHT_AVAILABLE = True
+except ImportError:  # pragma: no cover
+    _PLAYWRIGHT_AVAILABLE = False
+
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "events.json"
 CSV_FILE = Path(__file__).resolve().parent.parent / "raw-data" / "events.csv"
 
@@ -74,6 +83,48 @@ def fetch_html(url: str) -> str:
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read().decode("utf-8", errors="replace")
+
+
+def fetch_html_with_browser(url: str, wait_selector: str = "", timeout_ms: int = 30_000) -> str:
+    """Fetch a JS-rendered page using a headless Chromium browser via Playwright.
+
+    Falls back to :func:`fetch_html` (urllib) when Playwright is not installed.
+    The browser waits for ``wait_selector`` (a CSS selector) to appear in the DOM
+    before returning the rendered HTML.  When ``wait_selector`` is empty the
+    function waits for ``networkidle`` instead.
+
+    Parameters
+    ----------
+    url:
+        Page URL to navigate to.
+    wait_selector:
+        Optional CSS selector to wait for before capturing the page HTML.
+        When empty, the browser waits for ``networkidle`` (no in-flight
+        network requests for 500 ms).
+    timeout_ms:
+        Maximum milliseconds to wait for the page or selector to be ready.
+    """
+    if not _PLAYWRIGHT_AVAILABLE:
+        return fetch_html(url)
+
+    with _sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
+        try:
+            page = browser.new_page(
+                user_agent=(
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/120.0.0.0 Safari/537.36"
+                ),
+            )
+            page.goto(url, timeout=timeout_ms, wait_until="domcontentloaded")
+            if wait_selector:
+                page.wait_for_selector(wait_selector, timeout=timeout_ms)
+            else:
+                page.wait_for_load_state("networkidle", timeout=timeout_ms)
+            return page.content()
+        finally:
+            browser.close()
 
 
 def _iter_json_objects(value: Any):
@@ -353,10 +404,14 @@ def extract_band_names(node: dict[str, Any]) -> str:
 
 
 def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
-    html = fetch_html(source["url"])
     if source["venue"] == "Union Transfer":
+        # utphilly.com is a JS-rendered SPA; a headless browser is required to
+        # get rendered event content.  Playwright is used when available; urllib
+        # is the fallback (it returns a near-empty shell for this site).
+        html = fetch_html_with_browser(source["url"])
         return _scrape_union_transfer_events(source, html)
 
+    html = fetch_html(source["url"])
     events: list[dict[str, str]] = []
 
     for node in extract_event_nodes(html):

@@ -15,7 +15,13 @@ from typing import Any
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.scrape_events import _find_union_transfer_event_links, _iter_json_fragments, fetch_html
+from scripts.scrape_events import (
+    _find_union_transfer_event_links,
+    _iter_json_fragments,
+    fetch_html,
+    fetch_html_with_browser,
+    _PLAYWRIGHT_AVAILABLE,
+)
 
 DEFAULT_URL = "https://www.utphilly.com/calendar/"
 SCRIPT_BLOCK_PATTERN = re.compile(
@@ -340,7 +346,9 @@ def inspect_url(
     context: int,
     max_preview: int,
 ) -> dict[str, Any]:
-    html = fetch_html(url)
+    # Use the headless browser when Playwright is available so that JS-rendered
+    # content is present in the inspected HTML.
+    html = fetch_html_with_browser(url)
 
     if dump_html:
         Path(dump_html).write_text(html, encoding="utf-8")
@@ -348,6 +356,7 @@ def inspect_url(
     result: dict[str, Any] = {
         "url": url,
         "html_length": len(html),
+        "browser_rendered": _PLAYWRIGHT_AVAILABLE,
     }
 
     if dump_html:
