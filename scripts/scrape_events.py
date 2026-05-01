@@ -75,6 +75,22 @@ UNION_TRANSFER_EVENT_LINK_PATTERN = re.compile(
 H2_TEXT_PATTERN = re.compile(r"<h2[^>]*>(.*?)</h2>", flags=re.IGNORECASE | re.DOTALL)
 TAG_PATTERN = re.compile(r"<[^>]+>")
 
+# Pattern to extract the AEG event-widget JSON data URL from the calendar page.
+# The widget stores all events in a blob-storage JSON file referenced via data-file="...".
+AEG_DATA_FILE_PATTERN = re.compile(
+    r'data-file="(https://[^"]*\.json)"',
+    re.IGNORECASE,
+)
+
+# AEG event JSON field names (the blob-storage events.json format).
+# Each tuple lists candidate keys in priority order — the first non-empty value wins.
+# Multiple alternatives exist because the AEG platform uses slightly different field
+# names across widget versions and venue configurations.
+AEG_DATE_KEYS = ("date", "startDate", "start_date", "eventDate", "showDate", "dateTime", "startsAt")
+AEG_NAME_KEYS = ("name", "title", "eventName", "event_name", "headline")
+AEG_URL_KEYS = ("eventUrl", "url", "event_url", "link", "permalink", "eventLink")
+AEG_ARTIST_KEYS = ("artists", "performer", "performers", "acts", "headliners", "supporting")
+
 
 def fetch_html(url: str) -> str:
     request = urllib.request.Request(
@@ -215,7 +231,105 @@ def _event_from_node(node: dict[str, Any], source: dict[str, str], default_link:
     }
 
 
+def _extract_aeg_data_file_url(html: str) -> str:
+    """Return the AEG widget events-JSON URL embedded in a utphilly.com page.
+
+    The calendar page contains a div like::
+
+        <div ... data-file="https://aegwebprod.blob.core.windows.net/json/events/289/events.json" ...>
+
+    This URL points to a public Azure Blob Storage file that holds all upcoming
+    events as a JSON array — no JavaScript execution required.
+    """
+    m = AEG_DATA_FILE_PATTERN.search(html)
+    return m.group(1) if m else ""
+
+
+def _extract_aeg_artists(event: dict[str, Any]) -> str:
+    """Build a comma-separated artist string from an AEG event JSON object."""
+    for key in AEG_ARTIST_KEYS:
+        artists_raw = event.get(key)
+        if not artists_raw:
+            continue
+        if isinstance(artists_raw, str) and artists_raw.strip():
+            return unescape(artists_raw.strip())
+        if isinstance(artists_raw, list):
+            names: list[str] = []
+            for item in artists_raw:
+                if isinstance(item, str) and item.strip():
+                    names.append(unescape(item.strip()))
+                elif isinstance(item, dict):
+                    name = item.get("name") or item.get("title") or ""
+                    if isinstance(name, str) and name.strip():
+                        names.append(unescape(name.strip()))
+            if names:
+                # dict.fromkeys preserves insertion order while removing duplicates
+                return ", ".join(dict.fromkeys(names))
+    return ""
+
+
+def _event_from_aeg_json(event: dict[str, Any], source: dict[str, str]) -> dict[str, str]:
+    """Convert one AEG events.json object to the standard event dict."""
+    raw_date = _first_nonempty_string(event, AEG_DATE_KEYS)
+    event_url = _first_nonempty_string(event, AEG_URL_KEYS)
+    link = urljoin(source["url"], event_url) if event_url else ""
+
+    bands = _extract_aeg_artists(event)
+    if not bands:
+        bands = _first_nonempty_string(event, AEG_NAME_KEYS) or "TBA"
+
+    return {
+        "date": normalize_date(raw_date),
+        "bands": bands,
+        "venue": source["venue"],
+        "link": link,
+    }
+
+
+def _scrape_union_transfer_from_aeg_json(
+    source: dict[str, str], events_json_url: str
+) -> list[dict[str, str]]:
+    """Fetch and parse the AEG blob-storage events.json directly.
+
+    This is the preferred path for Union Transfer: no JavaScript execution is
+    needed because the widget data URL is embedded in the static HTML and the
+    JSON file itself is publicly accessible.
+
+    Returns an empty list if the URL cannot be fetched or the response is not
+    a valid JSON array, allowing the caller to fall back to another strategy.
+    """
+    try:
+        raw = fetch_html(events_json_url)
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        return []
+
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return []
+
+    if not isinstance(data, list):
+        return []
+
+    events: list[dict[str, str]] = []
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        event = _event_from_aeg_json(item, source)
+        events.append(event)
+    return events
+
+
 def _scrape_union_transfer_events(source: dict[str, str], calendar_html: str) -> list[dict[str, str]]:
+    # Primary path: extract the AEG widget data-file URL and fetch it directly.
+    # This returns the full event list as a JSON array without needing JS execution.
+    data_file_url = _extract_aeg_data_file_url(calendar_html)
+    if data_file_url:
+        aeg_events = _scrape_union_transfer_from_aeg_json(source, data_file_url)
+        if aeg_events:
+            return aeg_events
+
+    # Fallback: attempt JSON-LD / inline-JSON extraction and event-detail link crawling.
     events: list[dict[str, str]] = []
     seen_links: set[str] = set()
     processed_detail_links: set[str] = set()
@@ -405,10 +519,12 @@ def extract_band_names(node: dict[str, Any]) -> str:
 
 def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
     if source["venue"] == "Union Transfer":
-        # utphilly.com is a JS-rendered SPA; a headless browser is required to
-        # get rendered event content.  Playwright is used when available; urllib
-        # is the fallback (it returns a near-empty shell for this site).
-        html = fetch_html_with_browser(source["url"])
+        # The utphilly.com calendar page embeds a ``data-file`` attribute pointing
+        # to a publicly accessible AEG JSON file on Azure Blob Storage.  Fetching
+        # that URL directly (no JavaScript execution needed) is the primary path.
+        # ``_scrape_union_transfer_events`` handles the AEG JSON fetch and falls
+        # back to JSON-LD / detail-page crawling automatically.
+        html = fetch_html(source["url"])
         return _scrape_union_transfer_events(source, html)
 
     html = fetch_html(source["url"])

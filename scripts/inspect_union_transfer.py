@@ -16,8 +16,10 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.scrape_events import (
+    _extract_aeg_data_file_url,
     _find_union_transfer_event_links,
     _iter_json_fragments,
+    _scrape_union_transfer_from_aeg_json,
     fetch_html,
     fetch_html_with_browser,
     _PLAYWRIGHT_AVAILABLE,
@@ -346,21 +348,32 @@ def inspect_url(
     context: int,
     max_preview: int,
 ) -> dict[str, Any]:
-    # Use the headless browser when Playwright is available so that JS-rendered
-    # content is present in the inspected HTML.
-    html = fetch_html_with_browser(url)
+    # Use plain urllib fetch — the key AEG event data is in a data-file JSON URL
+    # embedded in the static HTML, not in JS-rendered content.
+    html = fetch_html(url)
 
     if dump_html:
         Path(dump_html).write_text(html, encoding="utf-8")
 
+    # Always surface the AEG events JSON URL (it's the primary data source).
+    aeg_data_file_url = _extract_aeg_data_file_url(html)
+
     result: dict[str, Any] = {
         "url": url,
         "html_length": len(html),
-        "browser_rendered": _PLAYWRIGHT_AVAILABLE,
+        "aeg_events_json_url": aeg_data_file_url or None,
     }
 
     if dump_html:
         result["html_dumped_to"] = dump_html
+
+    # If the AEG JSON URL was found, try to fetch and report the events directly.
+    if aeg_data_file_url:
+        source = {"venue": "Union Transfer", "url": url}
+        aeg_events = _scrape_union_transfer_from_aeg_json(source, aeg_data_file_url)
+        result["aeg_events_count"] = len(aeg_events)
+        if aeg_events:
+            result["aeg_events_sample"] = aeg_events[:5]
 
     if show_scripts:
         result["scripts"] = summarize_script_blocks(html, max_preview=max_preview)
