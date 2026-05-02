@@ -2,9 +2,13 @@ import unittest
 
 from scripts import scrape_events
 from scripts.scrape_events import (
+    _extract_aeg_data_file_url,
+    _event_from_aeg_json,
+    _scrape_union_transfer_from_aeg_json,
     _find_union_transfer_event_links,
     extract_event_nodes,
     extract_band_names,
+    fetch_html_with_browser,
     normalize_date,
     scrape_source,
 )
@@ -29,6 +33,162 @@ class ScrapeEventsTests(unittest.TestCase):
             ],
             links,
         )
+
+    def test_extract_aeg_data_file_url_found(self):
+        html = """
+        <div class="js-axs-events-section"
+             data-file="https://aegwebprod.blob.core.windows.net/json/events/289/events.json"
+             data-limit="12">
+        </div>
+        """
+        url = _extract_aeg_data_file_url(html)
+        self.assertEqual(
+            "https://aegwebprod.blob.core.windows.net/json/events/289/events.json", url
+        )
+
+    def test_extract_aeg_data_file_url_not_found(self):
+        html = "<html><body>No widget here</body></html>"
+        self.assertEqual("", _extract_aeg_data_file_url(html))
+
+    def test_event_from_aeg_json_real_schema_nested_title_and_ticketing(self):
+        """Test against the actual AEG blob-storage JSON schema (nested title + ticketing)."""
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        aeg_event = {
+            "eventId": "1289482",
+            "eventDateTimeISO": "2026-05-01T20:00:00-04:00",
+            "title": {
+                "headlinersText": "The Afghan Whigs",
+                "supportingText": "Mercury Rev",
+            },
+            "ticketing": {
+                "url": "https://www.axs.com/events/1289482/the-afghan-whigs-tickets",
+                "eventUrl": "https://www.axs.com/events/1289482/the-afghan-whigs-tickets",
+            },
+        }
+        event = _event_from_aeg_json(aeg_event, source)
+        self.assertEqual("2026-05-01", event["date"])
+        self.assertEqual("The Afghan Whigs / Mercury Rev", event["bands"])
+        self.assertIn("axs.com", event["link"])
+
+    def test_event_from_aeg_json_maps_fields(self):
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        aeg_event = {
+            "name": "Night Owls",
+            "date": "2026-08-15",
+            "eventUrl": "/events/detail/?event_id=9001",
+            "artists": [{"name": "Night Owls"}, {"name": "The Openers"}],
+        }
+        event = _event_from_aeg_json(aeg_event, source)
+        self.assertEqual("2026-08-15", event["date"])
+        self.assertEqual("Night Owls, The Openers", event["bands"])
+        self.assertEqual("Union Transfer", event["venue"])
+        self.assertIn("event_id=9001", event["link"])
+
+    def test_event_from_aeg_json_artist_string(self):
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        aeg_event = {
+            "name": "Solo Act",
+            "date": "2026-09-01",
+            "eventUrl": "/events/detail/?event_id=9002",
+            "artists": "Solo Act",
+        }
+        event = _event_from_aeg_json(aeg_event, source)
+        self.assertEqual("Solo Act", event["bands"])
+
+    def test_event_from_aeg_json_falls_back_to_name(self):
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        aeg_event = {
+            "name": "The Show Title",
+            "date": "2026-10-01",
+            "eventUrl": "/events/detail/?event_id=9003",
+        }
+        event = _event_from_aeg_json(aeg_event, source)
+        self.assertEqual("The Show Title", event["bands"])
+
+    def test_scrape_union_transfer_from_aeg_json_success(self):
+        """Also handles the real {"meta": ..., "events": [...]} envelope."""
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        import json as _json
+        events_payload = _json.dumps({
+            "meta": {"total": 2, "page": 1, "rows": 100},
+            "events": [
+                {
+                    "eventDateTimeISO": "2026-06-10T19:00:00-04:00",
+                    "title": {"headlinersText": "Band A", "supportingText": None},
+                    "ticketing": {"url": "https://www.axs.com/events/1/band-a-tickets"},
+                },
+                {
+                    "eventDateTimeISO": "2026-06-20T19:00:00-04:00",
+                    "title": {"headlinersText": "Band B", "supportingText": None},
+                    "ticketing": {"url": "https://www.axs.com/events/2/band-b-tickets"},
+                },
+            ],
+        })
+        original_fetch_html = scrape_events.fetch_html
+        scrape_events.fetch_html = lambda url: events_payload
+        try:
+            events = _scrape_union_transfer_from_aeg_json(
+                source, "https://aegwebprod.blob.core.windows.net/json/events/289/events.json"
+            )
+        finally:
+            scrape_events.fetch_html = original_fetch_html
+
+        self.assertEqual(2, len(events))
+        self.assertEqual("Band A", events[0]["bands"])
+        self.assertEqual("2026-06-10", events[0]["date"])
+
+    def test_scrape_union_transfer_from_aeg_json_returns_empty_on_network_error(self):
+        import urllib.error
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        original_fetch_html = scrape_events.fetch_html
+
+        def _raise(url):
+            raise urllib.error.URLError("no address")
+
+        scrape_events.fetch_html = _raise
+        try:
+            events = _scrape_union_transfer_from_aeg_json(
+                source, "https://aegwebprod.blob.core.windows.net/json/events/289/events.json"
+            )
+        finally:
+            scrape_events.fetch_html = original_fetch_html
+
+        self.assertEqual([], events)
+
+    def test_scrape_source_union_transfer_uses_aeg_json_when_available(self):
+        """When data-file URL is in the page HTML, AEG JSON is fetched directly."""
+        import json as _json
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        calendar_html = """
+        <div class="js-axs-events-section"
+             data-file="https://aegwebprod.blob.core.windows.net/json/events/289/events.json">
+        </div>
+        """
+        # Use the real envelope format {"meta": ..., "events": [...]}
+        events_payload = _json.dumps({
+            "meta": {"total": 1, "page": 1, "rows": 100},
+            "events": [
+                {
+                    "eventDateTimeISO": "2026-07-04T19:00:00-04:00",
+                    "title": {"headlinersText": "AEG Band", "supportingText": None},
+                    "ticketing": {"url": "https://www.axs.com/events/42/aeg-band-tickets"},
+                },
+            ],
+        })
+        pages = {
+            "https://www.utphilly.com/calendar/": calendar_html,
+            "https://aegwebprod.blob.core.windows.net/json/events/289/events.json": events_payload,
+        }
+        original_fetch_html = scrape_events.fetch_html
+        scrape_events.fetch_html = lambda url: pages[url]
+        try:
+            events = scrape_source(source)
+        finally:
+            scrape_events.fetch_html = original_fetch_html
+
+        self.assertEqual(1, len(events))
+        self.assertEqual("AEG Band", events[0]["bands"])
+        self.assertEqual("2026-07-04", events[0]["date"])
 
     def test_scrape_source_union_transfer_uses_detail_pages_and_h2_fallback(self):
         source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
@@ -181,6 +341,22 @@ class ScrapeEventsTests(unittest.TestCase):
         self.assertEqual("2026-07-09", normalize_date("2026-07-09"))
         self.assertEqual("2024-07-03", normalize_date(1720000000))
         self.assertEqual("TBA", normalize_date(None))
+
+    def test_fetch_html_with_browser_fallback_without_playwright(self):
+        """When Playwright is not installed, fetch_html_with_browser delegates to fetch_html."""
+        captured = []
+        original_fetch_html = scrape_events.fetch_html
+        original_playwright_flag = scrape_events._PLAYWRIGHT_AVAILABLE
+        scrape_events.fetch_html = lambda url: captured.append(url) or "<html/>"
+        scrape_events._PLAYWRIGHT_AVAILABLE = False
+        try:
+            result = fetch_html_with_browser("https://example.com/")
+        finally:
+            scrape_events.fetch_html = original_fetch_html
+            scrape_events._PLAYWRIGHT_AVAILABLE = original_playwright_flag
+
+        self.assertEqual(["https://example.com/"], captured)
+        self.assertEqual("<html/>", result)
 
 
 if __name__ == '__main__':
