@@ -76,3 +76,37 @@ tbody tr:nth-child(even) {
 a {
   color: #0044cc;
 }
+
+.tab-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  color: #555;
+  position: relative;
+  bottom: -2px;
+}
+
+.tab-btn:hover {
+  background: #f0f0f0;
+  color: #111;
+}
+
+.tab-btn--active {
+  background: #fff;
+  border-color: #ddd;
+  border-bottom-color: #fff;
+  color: #111;
+  font-weight: bold;
+}
