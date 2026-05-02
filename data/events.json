@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T01:12:47.870647+00:00",
+  "generated_at": "2026-05-02T16:45:11.606607+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -16,18 +16,6 @@
   ],
   "events": [
     {
-      "date": "2026-05-01",
-      "bands": "Arkells",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/arkells-philadelphia-pennsylvania-05-01-2026/event/02006425D8FA9A52"
-    },
-    {
-      "date": "2026-05-01",
-      "bands": "The Afghan Whigs  40th Anniversary Tour With Mercury Rev  (21+ Event)",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1289482/the-afghan-whigs-40th-anniversary-tour-with-mercury-rev-21-event-tickets"
-    },
-    {
       "date": "2026-05-02",
       "bands": "Decibel Metal & Beer Fest",
       "venue": "The Fillmore",
@@ -38,12 +26,6 @@
       "bands": "Decibel Metal & Beer Fest: 2-Day Pass",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/decibel-metal-beer-fest-2day-pass-philadelphia-pennsylvania-05-02-2026/event/0200638CD148F6E1"
-    },
-    {
-      "date": "2026-05-02",
-      "bands": "POLISH PHISH (The Polish Ambassador)",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-polish-phish-the-polish-ambassador--175108"
     },
     {
       "date": "2026-05-02",
@@ -542,6 +524,12 @@
       "bands": "Kevin Morby / Liam Kazar",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1324691/kevin-morby-tickets"
+    },
+    {
+      "date": "2026-06-10",
+      "bands": "Choker",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/choker-philadelphia-pennsylvania-06-10-2026/event/0200645293B6897C"
     },
     {
       "date": "2026-06-11",

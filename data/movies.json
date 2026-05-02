@@ -1,6 +1,8 @@
 {
-  "generated_at": "2026-05-02T01:12:48.216120+00:00",
+  "generated_at": "2026-05-02T16:45:28.513152+00:00",
   "source": "https://www.landmarktheatres.com/showtimes/",
   "movies": [],
-  "errors": []
+  "errors": [
+    "No theater options found in the location dropdown \u2013 the CDN serving the site's JavaScript may be unreachable"
+  ]
 }
