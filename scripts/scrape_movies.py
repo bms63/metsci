@@ -13,7 +13,9 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
+import sys
 import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
@@ -66,6 +68,20 @@ MOVIE_URL_KEYS = ("url", "link", "ticketUrl", "buyTicketsLink", "permalink")
 LOCATION_NAME_KEYS = ("name", "title", "theaterName")
 
 SCREENING_TYPES = frozenset({"ScreeningEvent", "MovieEvent", "Event", "TheaterEvent"})
+
+
+def _warn(message: str) -> None:
+    """Print a warning that is visible in GitHub Actions as an annotation.
+
+    When running inside a GitHub Actions workflow (``GITHUB_ACTIONS=true``),
+    the message is emitted using the ``::warning::`` workflow command so that
+    it appears as a yellow warning annotation in the Actions UI.  In all other
+    environments the message is written to *stderr*.
+    """
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::warning::{message}", flush=True)
+    else:
+        print(f"WARNING: {message}", file=sys.stderr, flush=True)
 
 
 def fetch_html(url: str) -> str:
@@ -675,8 +691,26 @@ def scrape_all_dates() -> tuple[list[dict[str, str]], list[str]]:
 def main() -> None:
     all_movies, errors = scrape_all_dates()
 
+    if errors:
+        for error in errors:
+            _warn(f"Movie scraping error: {error}")
+
     if not all_movies:
-        all_movies = load_existing_movies()
+        _warn(
+            "No movie data was scraped from any website. "
+            "The Landmark Theatres site may be unreachable or its structure may have changed."
+        )
+        cached = load_existing_movies()
+        if cached:
+            _warn(
+                f"Falling back to {len(cached)} cached movie record(s) from data/movies.json. "
+                "Data may be out of date."
+            )
+            all_movies = cached
+        else:
+            _warn(
+                "No cached movie data found either. data/movies.json will contain an empty list."
+            )
 
     all_movies.sort(key=lambda m: (m["date"], m["location"], m["title"]))
 
