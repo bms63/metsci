@@ -1,8 +1,10 @@
+import io
 import unittest
 from unittest.mock import MagicMock, patch
 
 from scripts.scrape_movies import (
     _PLAYWRIGHT_AVAILABLE,
+    _warn,
     extract_movies_from_html,
     fetch_html_with_browser,
     normalize_date,
@@ -231,3 +233,73 @@ class ScrapeWithPlaywrightTests(unittest.TestCase):
 
         self.assertEqual([], movies)
         self.assertTrue(any("theater" in e.lower() or "dropdown" in e.lower() for e in errors))
+
+
+class WarnTests(unittest.TestCase):
+    def test_emits_github_actions_annotation_in_ci(self):
+        """In a GitHub Actions environment _warn() prints a ::warning:: annotation."""
+        with patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}):
+            with patch("builtins.print") as mock_print:
+                _warn("test message")
+        mock_print.assert_called_once_with("::warning::test message", flush=True)
+
+    def test_writes_to_stderr_outside_ci(self):
+        """Outside GitHub Actions _warn() writes to stderr."""
+        with patch.dict("os.environ", {}, clear=True):
+            buf = io.StringIO()
+            with patch("sys.stderr", buf):
+                _warn("outside ci")
+        self.assertIn("outside ci", buf.getvalue())
+        self.assertIn("WARNING", buf.getvalue())
+
+
+class MainWarningTests(unittest.TestCase):
+    """Tests that main() emits warnings when scraping returns no data."""
+
+    def _run_main(self, scraped_movies, errors, cached_movies=None):
+        """Call main() with mocked scrape_all_dates and load_existing_movies."""
+        import tempfile
+        from pathlib import Path
+        import scripts.scrape_movies as mod
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            data_file = Path(tmpdir) / "movies.json"
+            csv_file = Path(tmpdir) / "movies.csv"
+            with (
+                patch.object(mod, "DATA_FILE", data_file),
+                patch.object(mod, "CSV_FILE", csv_file),
+                patch("scripts.scrape_movies.scrape_all_dates", return_value=(scraped_movies, errors)),
+                patch("scripts.scrape_movies.load_existing_movies", return_value=(cached_movies or [])),
+            ):
+                warnings_emitted = []
+                with patch("scripts.scrape_movies._warn", side_effect=warnings_emitted.append):
+                    mod.main()
+        return warnings_emitted
+
+    def test_no_warning_when_movies_scraped(self):
+        movies = [{"date": "2026-05-02", "title": "A Film", "genre": "Drama",
+                   "location": "Theater", "link": ""}]
+        warnings = self._run_main(movies, [])
+        self.assertEqual([], warnings)
+
+    def test_warns_on_scraping_errors(self):
+        warnings = self._run_main(
+            scraped_movies=[{"date": "2026-05-02", "title": "A Film", "genre": "Drama",
+                             "location": "Theater", "link": ""}],
+            errors=["2026-05-02: some error"],
+        )
+        self.assertTrue(any("some error" in w for w in warnings))
+
+    def test_warns_when_no_movies_scraped(self):
+        warnings = self._run_main(scraped_movies=[], errors=[])
+        self.assertTrue(any("No movie data was scraped" in w for w in warnings))
+
+    def test_warns_when_falling_back_to_cache(self):
+        cached = [{"date": "2026-04-01", "title": "Old Film", "genre": "N/A",
+                   "location": "Theater", "link": ""}]
+        warnings = self._run_main(scraped_movies=[], errors=[], cached_movies=cached)
+        self.assertTrue(any("Falling back" in w and "cached" in w for w in warnings))
+
+    def test_warns_when_no_cache_either(self):
+        warnings = self._run_main(scraped_movies=[], errors=[], cached_movies=[])
+        self.assertTrue(any("No cached movie data" in w for w in warnings))
