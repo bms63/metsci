@@ -42,7 +42,11 @@ CSV_FILE = Path(__file__).resolve().parent.parent / "raw-data" / "movies.csv"
 BASE_URL = "https://www.landmarktheatres.com/showtimes/"
 MAX_DAYS = 90
 MAX_EMPTY_DAYS = 3
-USER_AGENT = "Mozilla/5.0 (Facehuggers Movie Scraper)"
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/125.0.0.0 Safari/537.36"
+)
 
 NEXT_DATA_PATTERN = re.compile(
     r'<script[^>]*id=["\']__NEXT_DATA__["\'][^>]*>(.*?)</script>',
@@ -68,6 +72,13 @@ MOVIE_URL_KEYS = ("url", "link", "ticketUrl", "buyTicketsLink", "permalink")
 LOCATION_NAME_KEYS = ("name", "title", "theaterName")
 
 SCREENING_TYPES = frozenset({"ScreeningEvent", "MovieEvent", "Event", "TheaterEvent"})
+
+# Placeholder text shown in the location dropdown before a theater is selected.
+# These strings are filtered out so they are never treated as real theater names.
+THEATER_PLACEHOLDER_TEXTS = frozenset({
+    "PLEASE SELECT A LOCATION",
+    "SELECT A LOCATION",
+})
 
 
 def _warn(message: str) -> None:
@@ -103,11 +114,17 @@ def fetch_html_with_browser(
         return fetch_html(url)
 
     with _sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
+        browser = pw.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled"],
+        )
         try:
             page = browser.new_page(
                 user_agent=USER_AGENT,
                 ignore_https_errors=True,
+            )
+            page.add_init_script(
+                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
             )
             page.goto(url, wait_until=wait_until, timeout=timeout_ms)
             return page.content()
@@ -393,17 +410,20 @@ def _list_theaters(page: Any) -> list[str]:
     try:
         page.wait_for_function(
             "() => document.querySelectorAll('[role=\"option\"]').length > 0"
-            " || document.querySelectorAll('[role=\"listbox\"] li').length > 0",
-            timeout=8_000,
+            " || document.querySelectorAll('[role=\"listbox\"] li').length > 0"
+            " || document.querySelectorAll('select option').length > 1",
+            timeout=20_000,
         )
     except _PlaywrightTimeoutError:
         return []
 
-    for selector in ("[role='option']", "[role='listbox'] li"):
+    for selector in ("[role='option']", "[role='listbox'] li", "select option"):
         opts = page.query_selector_all(selector)
         if opts:
             names = [o.inner_text().strip() for o in opts]
-            return [n for n in names if n]
+            names = [n for n in names if n and n.upper() not in THEATER_PLACEHOLDER_TEXTS]
+            if names:
+                return names
 
     return []
 
@@ -552,15 +572,62 @@ def scrape_with_playwright() -> tuple[list[dict[str, str]], list[str]]:
     empty_streak = 0
     theater_names: list[str] = []
 
+    # Movies captured directly from intercepted API responses (JSON).  These
+    # supplement the DOM-extraction path and work even when the site structure
+    # changes.
+    api_movies: list[dict[str, str]] = []
+    seen_api: set[tuple[str, str, str]] = set()
+
+    def _capture_api_response(response: Any) -> None:
+        """Intercept JSON responses and extract any embedded movie data."""
+        try:
+            ct = response.headers.get("content-type", "")
+            if "json" not in ct:
+                return
+            url = response.url
+            # Skip bundled JS/CSS assets served by the site CDN.
+            if "/prod/landmarktheatres/" in url:
+                return
+            raw = response.text()
+            if not raw or not MOVIE_KEYWORD_PATTERN.search(raw):
+                return
+            try:
+                data = json.loads(raw)
+            except json.JSONDecodeError:
+                return
+            fallback_date = today.isoformat()
+            for node in _iter_json_objects(data):
+                if not isinstance(node, dict) or not _is_screening_node(node):
+                    continue
+                movie = _movie_from_node(node, fallback_date)
+                if not movie:
+                    continue
+                key = (movie["title"], movie["date"], movie["location"])
+                if key not in seen_api:
+                    seen_api.add(key)
+                    api_movies.append(movie)
+        except Exception:
+            pass
+
     try:
         with _sync_playwright() as pw:
-            browser = pw.chromium.launch(headless=True)
+            browser = pw.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
             try:
                 context = browser.new_context(
                     user_agent=USER_AGENT,
                     ignore_https_errors=True,
+                    viewport={"width": 1280, "height": 800},
+                    locale="en-US",
+                    timezone_id="America/Los_Angeles",
                 )
+                context.on("response", _capture_api_response)
                 page = context.new_page()
+                page.add_init_script(
+                    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+                )
 
                 for offset in range(MAX_DAYS):
                     current = today + timedelta(days=offset)
@@ -631,6 +698,14 @@ def scrape_with_playwright() -> tuple[list[dict[str, str]], list[str]]:
 
     except Exception as exc:
         errors.append(f"Playwright scraping failed: {type(exc).__name__}: {exc}")
+
+    # Merge any movies captured directly from API responses that were not
+    # already picked up by DOM extraction.
+    for m in api_movies:
+        key = (m["title"], m["date"], m["location"])
+        if key not in seen:
+            seen.add(key)
+            all_movies.append(m)
 
     return all_movies, errors
 
