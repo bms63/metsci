@@ -50,6 +50,26 @@ class ScrapeEventsTests(unittest.TestCase):
         html = "<html><body>No widget here</body></html>"
         self.assertEqual("", _extract_aeg_data_file_url(html))
 
+    def test_event_from_aeg_json_real_schema_nested_title_and_ticketing(self):
+        """Test against the actual AEG blob-storage JSON schema (nested title + ticketing)."""
+        source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
+        aeg_event = {
+            "eventId": "1289482",
+            "eventDateTimeISO": "2026-05-01T20:00:00-04:00",
+            "title": {
+                "headlinersText": "The Afghan Whigs",
+                "supportingText": "Mercury Rev",
+            },
+            "ticketing": {
+                "url": "https://www.axs.com/events/1289482/the-afghan-whigs-tickets",
+                "eventUrl": "https://www.axs.com/events/1289482/the-afghan-whigs-tickets",
+            },
+        }
+        event = _event_from_aeg_json(aeg_event, source)
+        self.assertEqual("2026-05-01", event["date"])
+        self.assertEqual("The Afghan Whigs / Mercury Rev", event["bands"])
+        self.assertIn("axs.com", event["link"])
+
     def test_event_from_aeg_json_maps_fields(self):
         source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
         aeg_event = {
@@ -86,12 +106,24 @@ class ScrapeEventsTests(unittest.TestCase):
         self.assertEqual("The Show Title", event["bands"])
 
     def test_scrape_union_transfer_from_aeg_json_success(self):
+        """Also handles the real {"meta": ..., "events": [...]} envelope."""
         source = {"venue": "Union Transfer", "url": "https://www.utphilly.com/calendar/"}
         import json as _json
-        events_payload = _json.dumps([
-            {"name": "Band A", "date": "2026-06-10", "eventUrl": "/events/detail/?event_id=1"},
-            {"name": "Band B", "date": "2026-06-20", "eventUrl": "/events/detail/?event_id=2"},
-        ])
+        events_payload = _json.dumps({
+            "meta": {"total": 2, "page": 1, "rows": 100},
+            "events": [
+                {
+                    "eventDateTimeISO": "2026-06-10T19:00:00-04:00",
+                    "title": {"headlinersText": "Band A", "supportingText": None},
+                    "ticketing": {"url": "https://www.axs.com/events/1/band-a-tickets"},
+                },
+                {
+                    "eventDateTimeISO": "2026-06-20T19:00:00-04:00",
+                    "title": {"headlinersText": "Band B", "supportingText": None},
+                    "ticketing": {"url": "https://www.axs.com/events/2/band-b-tickets"},
+                },
+            ],
+        })
         original_fetch_html = scrape_events.fetch_html
         scrape_events.fetch_html = lambda url: events_payload
         try:
@@ -132,9 +164,17 @@ class ScrapeEventsTests(unittest.TestCase):
              data-file="https://aegwebprod.blob.core.windows.net/json/events/289/events.json">
         </div>
         """
-        events_payload = _json.dumps([
-            {"name": "AEG Band", "date": "2026-07-04", "eventUrl": "/events/detail/?event_id=42"},
-        ])
+        # Use the real envelope format {"meta": ..., "events": [...]}
+        events_payload = _json.dumps({
+            "meta": {"total": 1, "page": 1, "rows": 100},
+            "events": [
+                {
+                    "eventDateTimeISO": "2026-07-04T19:00:00-04:00",
+                    "title": {"headlinersText": "AEG Band", "supportingText": None},
+                    "ticketing": {"url": "https://www.axs.com/events/42/aeg-band-tickets"},
+                },
+            ],
+        })
         pages = {
             "https://www.utphilly.com/calendar/": calendar_html,
             "https://aegwebprod.blob.core.windows.net/json/events/289/events.json": events_payload,

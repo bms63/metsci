@@ -246,7 +246,22 @@ def _extract_aeg_data_file_url(html: str) -> str:
 
 
 def _extract_aeg_artists(event: dict[str, Any]) -> str:
-    """Build a comma-separated artist string from an AEG event JSON object."""
+    """Build a comma-separated artist string from an AEG event JSON object.
+
+    The real AEG JSON uses a nested ``title`` object with ``headlinersText`` and
+    ``supportingText`` plain-text fields.  As a fallback the function also checks
+    flat artist-list keys that older or different widget versions may use.
+    """
+    # Primary path: use the nested title object (actual AEG events.json format).
+    title_obj = event.get("title")
+    if isinstance(title_obj, dict):
+        headliners = title_obj.get("headlinersText") or ""
+        supporting = title_obj.get("supportingText") or ""
+        parts = [p.strip() for p in (headliners, supporting) if isinstance(p, str) and p.strip()]
+        if parts:
+            return unescape(" / ".join(parts))
+
+    # Fallback: flat artist-list keys used by older/alternate widget versions.
     for key in AEG_ARTIST_KEYS:
         artists_raw = event.get(key)
         if not artists_raw:
@@ -269,10 +284,29 @@ def _extract_aeg_artists(event: dict[str, Any]) -> str:
 
 
 def _event_from_aeg_json(event: dict[str, Any], source: dict[str, str]) -> dict[str, str]:
-    """Convert one AEG events.json object to the standard event dict."""
-    raw_date = _first_nonempty_string(event, AEG_DATE_KEYS)
-    event_url = _first_nonempty_string(event, AEG_URL_KEYS)
-    link = urljoin(source["url"], event_url) if event_url else ""
+    """Convert one AEG events.json object to the standard event dict.
+
+    The actual AEG blob-storage schema uses:
+    - ``eventDateTimeISO`` for the ISO-8601 date/time string
+    - ``ticketing.url`` for the ticket/event URL
+    - ``title.headlinersText`` / ``title.supportingText`` for artist names
+    """
+    # Date: prefer the ISO field, fall back to the generic keys.
+    raw_date = (
+        event.get("eventDateTimeISO")
+        or _first_nonempty_string(event, AEG_DATE_KEYS)
+    )
+    if not isinstance(raw_date, str):
+        raw_date = ""
+
+    # URL: prefer ticketing.url, fall back to flat AEG_URL_KEYS.
+    ticketing = event.get("ticketing")
+    event_url = ""
+    if isinstance(ticketing, dict):
+        event_url = ticketing.get("url") or ticketing.get("eventUrl") or ""
+    if not event_url:
+        event_url = _first_nonempty_string(event, AEG_URL_KEYS)
+    link = event_url if event_url and event_url.startswith("http") else urljoin(source["url"], event_url) if event_url else ""
 
     bands = _extract_aeg_artists(event)
     if not bands:
@@ -295,8 +329,10 @@ def _scrape_union_transfer_from_aeg_json(
     needed because the widget data URL is embedded in the static HTML and the
     JSON file itself is publicly accessible.
 
-    Returns an empty list if the URL cannot be fetched or the response is not
-    a valid JSON array, allowing the caller to fall back to another strategy.
+    The response is a JSON object with ``{"meta": {...}, "events": [...]}``
+    (or a bare JSON array in older widget versions).  Returns an empty list if
+    the URL cannot be fetched or the response contains no usable events,
+    allowing the caller to fall back to another strategy.
     """
     try:
         raw = fetch_html(events_json_url)
@@ -307,6 +343,10 @@ def _scrape_union_transfer_from_aeg_json(
         data = json.loads(raw)
     except json.JSONDecodeError:
         return []
+
+    # Unwrap {"meta": ..., "events": [...]} envelope if present.
+    if isinstance(data, dict):
+        data = data.get("events", [])
 
     if not isinstance(data, list):
         return []
