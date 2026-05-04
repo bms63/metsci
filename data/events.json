@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:20:51.415675+00:00",
+  "generated_at": "2026-05-04T12:30:24.718286+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,36 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-05-02",
-      "bands": "Decibel Metal & Beer Fest",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/decibel-metal-beer-fest-philadelphia-pennsylvania-05-02-2026/event/0200638CD141F6D7"
-    },
-    {
-      "date": "2026-05-02",
-      "bands": "Decibel Metal & Beer Fest: 2-Day Pass",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/decibel-metal-beer-fest-2day-pass-philadelphia-pennsylvania-05-02-2026/event/0200638CD148F6E1"
-    },
-    {
-      "date": "2026-05-02",
-      "bands": "White Reaper x Drug Church / Spy, Public Opinion",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1265254/white-reaper-x-drug-church-tickets"
-    },
-    {
-      "date": "2026-05-03",
-      "bands": "Decibel Metal & Beer Fest",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/decibel-metal-beer-fest-philadelphia-pennsylvania-05-03-2026/event/0200638CD145F6DC"
-    },
-    {
-      "date": "2026-05-03",
-      "bands": "Recession Pop Dance Party",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/recession-pop-dance-party-176683"
-    },
     {
       "date": "2026-05-04",
       "bands": "Marlon Funaki - Half Moon Tour",
@@ -532,10 +502,28 @@
       "link": "https://www.ticketmaster.com/choker-philadelphia-pennsylvania-06-10-2026/event/0200645293B6897C"
     },
     {
+      "date": "2026-06-10",
+      "bands": "Ryan Bingham and The Texas Gentlemen - Still Gettin' Away With It Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/ryan-bingham-and-the-texas-gentlemen-philadelphia-pennsylvania-06-10-2026/event/0200644CC4E5F53F"
+    },
+    {
+      "date": "2026-06-11",
+      "bands": "Kiesza",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/kiesza-philadelphia-pennsylvania-06-11-2026/event/02006465AD4CC629"
+    },
+    {
       "date": "2026-06-11",
       "bands": "Deer Tick",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-deer-tick-179990"
+    },
+    {
+      "date": "2026-06-12",
+      "bands": "Ray Bull: Please Stop Laughing Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/ray-bull-please-stop-laughing-tour-philadelphia-pennsylvania-06-12-2026/event/02006445BF4BBC47"
     },
     {
       "date": "2026-06-12",
