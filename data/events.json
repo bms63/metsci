@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T12:30:24.718286+00:00",
+  "generated_at": "2026-05-11T12:54:39.757087+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -16,100 +16,10 @@
   ],
   "events": [
     {
-      "date": "2026-05-04",
-      "bands": "Marlon Funaki - Half Moon Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/marlon-funaki-half-moon-tour-philadelphia-pennsylvania-05-04-2026/event/02006426E830A7C2"
-    },
-    {
-      "date": "2026-05-05",
-      "bands": "MIKA - SPINNING OUT TOUR NORTH AMERICA",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/mika-spinning-out-tour-north-america-philadelphia-pennsylvania-05-05-2026/event/0200636D928AB445"
-    },
-    {
-      "date": "2026-05-05",
-      "bands": "Winyah",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/winyah-philadelphia-pennsylvania-05-05-2026/event/0200635D950A9A33"
-    },
-    {
-      "date": "2026-05-05",
-      "bands": "COBRAH - TORN TOUR / DJ LATEX",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1316282/cobrah-torn-tour-tickets"
-    },
-    {
-      "date": "2026-05-06",
-      "bands": "Dry Cleaning / YHWH Nailgun",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1174868/dry-cleaning-tickets"
-    },
-    {
-      "date": "2026-05-07",
-      "bands": "Tyler Rich and James Barker Band - Good Times & Better Company Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/tyler-rich-and-james-barker-band-philadelphia-pennsylvania-05-07-2026/event/02006391EB2FD8EC"
-    },
-    {
-      "date": "2026-05-07",
-      "bands": "The Lemon Twigs / Josephine Network",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1320648/the-lemon-twigs-tickets"
-    },
-    {
-      "date": "2026-05-08",
-      "bands": "Hit the Lights & Major League",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/hit-the-lights-major-league-philadelphia-pennsylvania-05-08-2026/event/02006435921D82A7"
-    },
-    {
-      "date": "2026-05-08",
-      "bands": "Blade Rave",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/blade-rave-182662"
-    },
-    {
-      "date": "2026-05-08",
-      "bands": "Corrosion Of Conformity",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/corrosion-of-conformity-172946"
-    },
-    {
-      "date": "2026-05-08",
-      "bands": "Searows / Jordan Patterson",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1265227/searows-tickets"
-    },
-    {
-      "date": "2026-05-09",
-      "bands": "Inner Wave - North America Tour '26",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/inner-wave-north-america-tour-26-philadelphia-pennsylvania-05-09-2026/event/02006427A4787279"
-    },
-    {
-      "date": "2026-05-09",
-      "bands": "CLOSED FOR PRIVATE EVENT",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/closed-for-private-event-170497"
-    },
-    {
-      "date": "2026-05-09",
-      "bands": "Free Throw / MACSEAL, TRSH, Wakelee",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1289480/free-throw-tickets"
-    },
-    {
       "date": "2026-05-11",
       "bands": "If Not For Me",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/if-not-for-me-philadelphia-pennsylvania-05-11-2026/event/02006458EE151E3A"
-    },
-    {
-      "date": "2026-05-11",
-      "bands": "JAY ELECTRONICA",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-jay-electronica-181740"
     },
     {
       "date": "2026-05-11",
@@ -223,7 +133,7 @@
       "date": "2026-05-17",
       "bands": "Infected Rain",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/infected-rain-168934"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-infected-rain-168934"
     },
     {
       "date": "2026-05-17",
@@ -437,6 +347,12 @@
     },
     {
       "date": "2026-06-05",
+      "bands": "Jamie Lee: My Friend Katy",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-jamie-lee-my-friend-katy-188560"
+    },
+    {
+      "date": "2026-06-05",
       "bands": "hemlocke springs: the apple tree under the sea tour / with Special Guest: The Girl!",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1324707/hemlocke-springs-the-apple-tree-under-the-sea-tour-tickets"
@@ -533,9 +449,15 @@
     },
     {
       "date": "2026-06-13",
+      "bands": "Girli",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/girli-philadelphia-pennsylvania-06-13-2026/event/0200644DC29614E6"
+    },
+    {
+      "date": "2026-06-13",
       "bands": "I Am The Avalanche",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/i-am-the-avalanche-180594"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-i-am-the-avalanche-180594"
     },
     {
       "date": "2026-06-13",
@@ -545,9 +467,39 @@
     },
     {
       "date": "2026-06-14",
+      "bands": "JINJER Duel North America 2026",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/jinjer-duel-north-america-2026-philadelphia-pennsylvania-06-14-2026/event/0200646B427EE4F9"
+    },
+    {
+      "date": "2026-06-14",
+      "bands": "Kelsy Karter & The Heroines: The Pleasure Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/kelsy-karter-the-heroines-the-pleasure-philadelphia-pennsylvania-06-14-2026/event/02006428A62B85CD"
+    },
+    {
+      "date": "2026-06-14",
+      "bands": "Golden Era Rave",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-golden-era-rave-186834"
+    },
+    {
+      "date": "2026-06-14",
       "bands": "Vundabar \u2013 \u2018Gawk\u2019 10 Year Anniversary Tour / Slow Fiction",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1286651/vundabar-gawk-10-year-anniversary-tour-tickets"
+    },
+    {
+      "date": "2026-06-15",
+      "bands": "GRAHAM - The MOODSWINGS Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/graham-the-moodswings-tour-philadelphia-pennsylvania-06-15-2026/event/0200645BF41EC5A3"
+    },
+    {
+      "date": "2026-06-16",
+      "bands": "dead calm",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/dead-calm-philadelphia-pennsylvania-06-16-2026/event/02006430E94EEF47"
     },
     {
       "date": "2026-06-16",
@@ -569,15 +521,33 @@
     },
     {
       "date": "2026-06-18",
+      "bands": "Daisy Grenade",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/daisy-grenade-philadelphia-pennsylvania-06-18-2026/event/0200642DEF62D26F"
+    },
+    {
+      "date": "2026-06-18",
+      "bands": "Kota The Friend + Junglepussy",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-kota-the-friend-junglepussy-188683"
+    },
+    {
+      "date": "2026-06-18",
       "bands": "PawPaw Rod",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/pawpaw-rod-177296"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-pawpaw-rod-177296"
     },
     {
       "date": "2026-06-18",
       "bands": "The Movement & Pepper  (21+ Event) / with special guest Kash'd Out",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1379985/the-movement-pepper-21-event-tickets"
+    },
+    {
+      "date": "2026-06-19",
+      "bands": "United We Heal Film Fest + After Party",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-united-we-heal-film-fest-after-party-188687"
     },
     {
       "date": "2026-06-19",
@@ -592,6 +562,12 @@
       "link": "https://www.axs.com/events/1210655/wolfmother-tickets"
     },
     {
+      "date": "2026-06-21",
+      "bands": "Broadway Rave",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-broadway-rave-187063"
+    },
+    {
       "date": "2026-06-22",
       "bands": "Del Amitri",
       "venue": "Underground Arts",
@@ -602,6 +578,12 @@
       "bands": "of Montreal",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/of-montreal-148914"
+    },
+    {
+      "date": "2026-06-27",
+      "bands": "Big Freedia",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-big-freedia-188710"
     },
     {
       "date": "2026-06-28",
@@ -626,6 +608,12 @@
       "bands": "The Frights",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-frights-186696"
+    },
+    {
+      "date": "2026-07-18",
+      "bands": "Finn Wolfhard / Sleeper's Bell",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1427363/finn-wolfhard-tickets"
     },
     {
       "date": "2026-07-19",
@@ -664,6 +652,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-california-honeydrops-175868"
     },
     {
+      "date": "2026-08-09",
+      "bands": "Nu Metal Values: Ozzfest Rehash",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-nu-metal-values-ozzfest-rehash-187994"
+    },
+    {
       "date": "2026-08-10",
       "bands": "Chance Pe\u00f1a / Hans Williams",
       "venue": "Union Transfer",
@@ -686,6 +680,12 @@
       "bands": "Eagles of Death Metal / Mountain Head",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1380733/eagles-of-death-metal-tickets"
+    },
+    {
+      "date": "2026-08-15",
+      "bands": "Pomplamoose",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1428064/pomplamoose-tickets"
     },
     {
       "date": "2026-08-16",
@@ -752,6 +752,24 @@
       "bands": "Hulvey / Indie Tribe, Kijan Boone",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1395268/hulvey-tickets"
+    },
+    {
+      "date": "2026-09-11",
+      "bands": "Black Marble / Public Circuit, Jimmy Cicero",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1434651/black-marble-tickets"
+    },
+    {
+      "date": "2026-09-12",
+      "bands": "PLOSIVS",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-plosivs-187245"
+    },
+    {
+      "date": "2026-09-12",
+      "bands": "Channel Tres / Eliza Rose",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1427040/channel-tres-tickets"
     },
     {
       "date": "2026-09-17",
