@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T13:04:28.814191+00:00",
+  "generated_at": "2026-06-01T13:55:58.291357+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,78 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-05-27",
-      "bands": "Young M.A.",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/young-ma-philadelphia-pennsylvania-05-27-2026/event/02006495B1BEBEA0"
-    },
-    {
-      "date": "2026-05-28",
-      "bands": "Em Beihold: Tales Of A Failed Shapeshifter Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/em-beihold-tales-of-a-failed-philadelphia-pennsylvania-05-28-2026/event/02006430CB2ED4D8"
-    },
-    {
-      "date": "2026-05-28",
-      "bands": "Witch Club Satan",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/witch-club-satan-173930"
-    },
-    {
-      "date": "2026-05-28",
-      "bands": "Pattie Gonia (21+ Event) / Feat. Sequoia and VERA!",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1253181/pattie-gonia-21-event-tickets"
-    },
-    {
-      "date": "2026-05-29",
-      "bands": "Cozy Worldwide: Throwback and Current R&B / Hip Hop Party - 21+ Event",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/cozy-worldwide-throwback-and-current-rb-philadelphia-pennsylvania-05-29-2026/event/0200645497CFA94C"
-    },
-    {
-      "date": "2026-05-29",
-      "bands": "High Fade",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/high-fade-173429"
-    },
-    {
-      "date": "2026-05-29",
-      "bands": "Chet Faker / Beacon, aLex vs aLex",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1192936/chet-faker-tickets"
-    },
-    {
-      "date": "2026-05-30",
-      "bands": "MASTER BOOT RECORD",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/master-boot-record-169445"
-    },
-    {
-      "date": "2026-05-30",
-      "bands": "The Brokes: A tribute to The Strokes",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/the-brokes-a-tribute-to-the-strokes-172796"
-    },
-    {
-      "date": "2026-05-30",
-      "bands": "Stan Society presents: 1D Night  (21+ Event)",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1362176/stan-society-presents-1d-night-21-event-tickets"
-    },
-    {
-      "date": "2026-05-31",
-      "bands": "WXPN Welcomes: Ben Folds & A Piano Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/wxpn-welcomes-ben-folds-a-piano-philadelphia-pennsylvania-05-31-2026/event/0200646BB1CFC6A2"
-    },
-    {
-      "date": "2026-05-31",
-      "bands": "Salvation: 2 Dark Parties - 2 Rooms",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-salvation-2-dark-parties-2-rooms-182565"
-    },
     {
       "date": "2026-06-02",
       "bands": "Yebba / Astyn Turr",
@@ -233,7 +161,7 @@
     },
     {
       "date": "2026-06-13",
-      "bands": "INJI",
+      "bands": "INJI / mayv",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1225288/inji-tickets"
     },
@@ -299,12 +227,6 @@
     },
     {
       "date": "2026-06-18",
-      "bands": "Kota The Friend + Junglepussy",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-kota-the-friend-junglepussy-188683"
-    },
-    {
-      "date": "2026-06-18",
       "bands": "PawPaw Rod",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-pawpaw-rod-177296"
@@ -320,6 +242,12 @@
       "bands": "Kenny Mason - American BULLDAWG Tour",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/kenny-mason-american-bulldawg-tour-philadelphia-pennsylvania-06-19-2026/event/0200644998904F3E"
+    },
+    {
+      "date": "2026-06-19",
+      "bands": "Kota The Friend + Junglepussy",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-kota-the-friend-junglepussy-188683"
     },
     {
       "date": "2026-06-19",
@@ -344,12 +272,6 @@
       "bands": "WOLFMOTHER / Celebrating 20 Years of Their Debut Album \u2014 Performed in Full, with Love Gang",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1210655/wolfmother-tickets"
-    },
-    {
-      "date": "2026-06-21",
-      "bands": "Julia Cole",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/julia-cole-philadelphia-pennsylvania-06-21-2026/event/020064749A259537"
     },
     {
       "date": "2026-06-21",
@@ -448,16 +370,52 @@
       "link": "https://www.ticketmaster.com/flyleaf-with-lacey-sturm-20th-anniversary-philadelphia-pennsylvania-07-11-2026/event/02006452AD9DC97A"
     },
     {
-      "date": "2026-07-12",
-      "bands": "Taylor Swift Night + Sabrina Carpenter Night (Multi-Room Event)",
+      "date": "2026-07-11",
+      "bands": "Kevian Kraemer",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/kevian-kraemer-philadelphia-pennsylvania-07-11-2026/event/02006490A8D7BEA9"
+    },
+    {
+      "date": "2026-07-11",
+      "bands": "Friends of Jerry",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-taylor-swift-night-sabrina-carpenter-night-multi-room-event--190906"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-friends-of-jerry-191523"
+    },
+    {
+      "date": "2026-07-12",
+      "bands": "Taylor Swift + Sabrina Carpenter Night - 2 Parties, 2 Rooms, 1 Ticket",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-taylor-swift-sabrina-carpenter-night-2-parties-2-rooms-1-ticket-190906"
     },
     {
       "date": "2026-07-13",
       "bands": "The Strike",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-strike-180197"
+    },
+    {
+      "date": "2026-07-15",
+      "bands": "The Marvelous Miss Gender starring BOSCO (18+ Event)",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/the-marvelous-miss-gender-starring-bosco-philadelphia-pennsylvania-07-15-2026/event/02006465D1EB1D4E"
+    },
+    {
+      "date": "2026-07-16",
+      "bands": "Beano French",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/beano-french-philadelphia-pennsylvania-07-16-2026/event/02006472FE117E2A"
+    },
+    {
+      "date": "2026-07-17",
+      "bands": "Rave Jesus - Rave Revival Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/rave-jesus-rave-revival-tour-philadelphia-pennsylvania-07-17-2026/event/020064700BF93502"
+    },
+    {
+      "date": "2026-07-17",
+      "bands": "WXPN Welcomes TROMBONE SHORTY & ORLEANS AVENUE - LET'S GO GET 'EM TOUR",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/wxpn-welcomes-trombone-shorty-orleans-avenue-philadelphia-pennsylvania-07-17-2026/event/02006452E97C4CF6"
     },
     {
       "date": "2026-07-17",
@@ -514,6 +472,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-school-of-rock-allstars-190307"
     },
     {
+      "date": "2026-07-25",
+      "bands": "Heated Twilight: A Heated Rivalry + Twilight Dance Party  (18+ Event)",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1465483/heated-twilight-a-heated-rivalry-twilight-dance-party-18-event-tickets"
+    },
+    {
       "date": "2026-07-27",
       "bands": "Tomahawk / Melvins",
       "venue": "Union Transfer",
@@ -530,6 +494,12 @@
       "bands": "The California Honeydrops",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-california-honeydrops-175868"
+    },
+    {
+      "date": "2026-08-08",
+      "bands": "Clown Cave",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-clown-cave-191676"
     },
     {
       "date": "2026-08-08",
@@ -622,10 +592,16 @@
       "link": "https://www.axs.com/events/1357677/arlo-parks-desire-tour-tickets"
     },
     {
-      "date": "2026-09-03",
-      "bands": "Monolord + Khemmis",
+      "date": "2026-09-01",
+      "bands": "Quicksand + Bane",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-monolord-khemmis-183720"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-quicksand-bane-191434"
+    },
+    {
+      "date": "2026-09-03",
+      "bands": "Monolord",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-monolord-183720"
     },
     {
       "date": "2026-09-04",
@@ -671,7 +647,7 @@
     },
     {
       "date": "2026-09-17",
-      "bands": "Angine de Poitrine ** SOLD OUT **",
+      "bands": "Angine de Poitrine **SOLD OUT**",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-angine-de-poitrine-sold-out--181254"
     },
@@ -755,6 +731,12 @@
     },
     {
       "date": "2026-10-15",
+      "bands": "Gilla Band",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-gilla-band-191519"
+    },
+    {
+      "date": "2026-10-15",
       "bands": "Benjamin Tod & Lost Dog Street Band / Tommy Prine",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1225873/benjamin-tod-lost-dog-street-band-tickets"
@@ -776,6 +758,12 @@
       "bands": "Marietta",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-marietta-189899"
+    },
+    {
+      "date": "2026-10-18",
+      "bands": "feeble little horse / with Snuggle",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1455596/feeble-little-horse-tickets"
     },
     {
       "date": "2026-10-19",
@@ -821,7 +809,7 @@
     },
     {
       "date": "2026-11-05",
-      "bands": "Fruit Bats",
+      "bands": "Fruit Bats / Sarah Klang",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1380726/fruit-bats-tickets"
     },
