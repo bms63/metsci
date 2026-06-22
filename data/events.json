@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T14:03:12.403303+00:00",
+  "generated_at": "2026-06-22T13:49:57.299200+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,96 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-06-15",
-      "bands": "GRAHAM - The MOODSWINGS Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/graham-the-moodswings-tour-philadelphia-pennsylvania-06-15-2026/event/0200645BF41EC5A3"
-    },
-    {
-      "date": "2026-06-16",
-      "bands": "dead calm",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/dead-calm-philadelphia-pennsylvania-06-16-2026/event/02006430E94EEF47"
-    },
-    {
-      "date": "2026-06-16",
-      "bands": "Wild Nothing",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-wild-nothing-186256"
-    },
-    {
-      "date": "2026-06-16",
-      "bands": "Josiah and the Bonnevilles / Max Alan, Brenna MacMillan",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1320653/josiah-and-the-bonnevilles-tickets"
-    },
-    {
-      "date": "2026-06-17",
-      "bands": "Worm",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-worm-179806"
-    },
-    {
-      "date": "2026-06-18",
-      "bands": "Daisy Grenade",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/daisy-grenade-philadelphia-pennsylvania-06-18-2026/event/0200642DEF62D26F"
-    },
-    {
-      "date": "2026-06-18",
-      "bands": "PawPaw Rod",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-pawpaw-rod-177296"
-    },
-    {
-      "date": "2026-06-18",
-      "bands": "The Movement & Pepper  (21+ Event) / with special guest Kash'd Out",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1379985/the-movement-pepper-21-event-tickets"
-    },
-    {
-      "date": "2026-06-19",
-      "bands": "Kenny Mason - American BULLDAWG Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/kenny-mason-american-bulldawg-tour-philadelphia-pennsylvania-06-19-2026/event/0200644998904F3E"
-    },
-    {
-      "date": "2026-06-19",
-      "bands": "Kota The Friend + Junglepussy + The Bul Bey",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-kota-the-friend-junglepussy-the-bul-bey-188683"
-    },
-    {
-      "date": "2026-06-19",
-      "bands": "United We Heal Film Fest + After Party",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-united-we-heal-film-fest-after-party-188687"
-    },
-    {
-      "date": "2026-06-19",
-      "bands": "smokedope2016 / with Ghostfacekush, bartesianWater",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1383111/smokedope2016-tickets"
-    },
-    {
-      "date": "2026-06-20",
-      "bands": "Secondhand Serenade",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/secondhand-serenade-philadelphia-pennsylvania-06-20-2026/event/02006390F4D6CA00"
-    },
-    {
-      "date": "2026-06-20",
-      "bands": "WOLFMOTHER / Celebrating 20 Years of Their Debut Album \u2014 Performed in Full, with Love Gang",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1210655/wolfmother-tickets"
-    },
-    {
-      "date": "2026-06-21",
-      "bands": "Broadway Rave",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-broadway-rave-187063"
-    },
     {
       "date": "2026-06-22",
       "bands": "Del Amitri",
@@ -430,6 +340,12 @@
       "link": "https://www.ticketmaster.com/royal-coda-philadelphia-pennsylvania-08-07-2026/event/020064A8DC8B5A61"
     },
     {
+      "date": "2026-08-07",
+      "bands": "2charm",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-2charm-194648"
+    },
+    {
       "date": "2026-08-08",
       "bands": "Cozy Worldwide: Throwback and Current R&B / Hip Hop Party - 21+ Event",
       "venue": "The Fillmore",
@@ -467,13 +383,19 @@
     },
     {
       "date": "2026-08-12",
+      "bands": "Molly Santana & North West: KIMOKAWAII TOUR",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/molly-santana-north-west-kimokawaii-tour-philadelphia-pennsylvania-08-12-2026/event/020064CA9825BA1A"
+    },
+    {
+      "date": "2026-08-12",
       "bands": "Dogstar: ALL IN NOW TOUR / The Backfires",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1332406/dogstar-all-in-now-tour-tickets"
     },
     {
       "date": "2026-08-13",
-      "bands": "Hail The Sun",
+      "bands": "Hail The Sun / Lobby Boxer, Coletta",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1472642/hail-the-sun-tickets"
     },
@@ -520,6 +442,24 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-yard-act-186251"
     },
     {
+      "date": "2026-08-17",
+      "bands": "Max McNown - The Summer Vacation Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/max-mcnown-the-summer-vacation-tour-philadelphia-pennsylvania-08-17-2026/event/020064789A40829D"
+    },
+    {
+      "date": "2026-08-19",
+      "bands": "Modest Mouse",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/modest-mouse-philadelphia-pennsylvania-08-19-2026/event/02006464A0D3BAE4"
+    },
+    {
+      "date": "2026-08-20",
+      "bands": "ISAIAH RASHAD: Lil Sunny's Awful Road Trip",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/isaiah-rashad-lil-sunnys-awful-road-philadelphia-pennsylvania-08-20-2026/event/020064CBA981CFF5"
+    },
+    {
       "date": "2026-08-20",
       "bands": "Never Home 2026 ft: Kaonashi",
       "venue": "Underground Arts",
@@ -530,6 +470,12 @@
       "bands": "Rome Streetz",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-rome-streetz-192297"
+    },
+    {
+      "date": "2026-08-22",
+      "bands": "Chance The Rapper - Coloring Book 10 Year Anniversary Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/chance-the-rapper-coloring-book-10-philadelphia-pennsylvania-08-22-2026/event/020064A89EC7AA71"
     },
     {
       "date": "2026-08-23",
@@ -617,12 +563,6 @@
     },
     {
       "date": "2026-09-12",
-      "bands": "PLOSIVS",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-plosivs-187245"
-    },
-    {
-      "date": "2026-09-12",
       "bands": "Channel Tres / Eliza Rose",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1427040/channel-tres-tickets"
@@ -662,6 +602,12 @@
       "bands": "Militarie Gun",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-militarie-gun-193228"
+    },
+    {
+      "date": "2026-09-22",
+      "bands": "Jensen McRae",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1485533/jensen-mcrae-tickets"
     },
     {
       "date": "2026-09-23",
@@ -716,6 +662,12 @@
       "bands": "U5 Fest",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-u5-fest-194647"
+    },
+    {
+      "date": "2026-10-03",
+      "bands": "Ceremony / Poison Ru\u00efn, Dry Socket",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1489033/ceremony-tickets"
     },
     {
       "date": "2026-10-08",
@@ -793,7 +745,7 @@
       "date": "2026-10-19",
       "bands": "Chasing Abbey",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/chasing-abbey-180849"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-chasing-abbey-180849"
     },
     {
       "date": "2026-10-22",
@@ -928,6 +880,12 @@
       "link": "https://www.axs.com/events/1468093/julia-jacklin-tickets"
     },
     {
+      "date": "2026-11-23",
+      "bands": "Yaelokre / Ben Caplan",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1489853/yaelokre-tickets"
+    },
+    {
       "date": "2026-12-04",
       "bands": "Temples",
       "venue": "Underground Arts",
@@ -962,6 +920,12 @@
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/anna-von-hausswolff-179765"
+    },
+    {
+      "date": "2027-05-29",
+      "bands": "HENGE",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-henge-194649"
     }
   ],
   "errors": []
