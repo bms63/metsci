@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T13:11:31.946109+00:00",
+  "generated_at": "2026-07-13T13:08:54.686062+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,60 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-07-09",
-      "bands": "D Jones",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/d-jones-philadelphia-pennsylvania-07-09-2026/event/0200649BE4E83C9F"
-    },
-    {
-      "date": "2026-07-09",
-      "bands": "Poppy - Constantly Nowhere Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/poppy-constantly-nowhere-tour-philadelphia-pennsylvania-07-09-2026/event/0200644CA5B4C6F8"
-    },
-    {
-      "date": "2026-07-09",
-      "bands": "Heated Rivalry Quizzo",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-heated-rivalry-quizzo-194614"
-    },
-    {
-      "date": "2026-07-09",
-      "bands": "Music Video Bingo: Recession Pop Era",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-music-video-bingo-recession-pop-era-194619"
-    },
-    {
-      "date": "2026-07-11",
-      "bands": "Flyleaf with Lacey Sturm - 20th Anniversary Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/flyleaf-with-lacey-sturm-20th-anniversary-philadelphia-pennsylvania-07-11-2026/event/02006452AD9DC97A"
-    },
-    {
-      "date": "2026-07-11",
-      "bands": "Kevian Kraemer",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/kevian-kraemer-philadelphia-pennsylvania-07-11-2026/event/02006490A8D7BEA9"
-    },
-    {
-      "date": "2026-07-11",
-      "bands": "Friends of Jerry",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-friends-of-jerry-191523"
-    },
-    {
-      "date": "2026-07-12",
-      "bands": "Taylor Swift + Sabrina Carpenter Night - 2 Parties, 2 Rooms, 1 Ticket",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-taylor-swift-sabrina-carpenter-night-2-parties-2-rooms-1-ticket-190906"
-    },
-    {
-      "date": "2026-07-13",
-      "bands": "The Strike",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-strike-180197"
-    },
     {
       "date": "2026-07-15",
       "bands": "The Marvelous Miss Gender starring BOSCO (18+ Event)",
@@ -175,7 +121,7 @@
       "date": "2026-07-25",
       "bands": "Allah-Las",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/allah-las-180746"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-allah-las-180746"
     },
     {
       "date": "2026-07-25",
@@ -260,6 +206,12 @@
       "bands": "KALEO - Way Down We Go Tour",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/kaleo-way-down-we-go-tour-philadelphia-pennsylvania-08-05-2026/event/0200642E98E17777"
+    },
+    {
+      "date": "2026-08-05",
+      "bands": "Family Feud",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-family-feud-198148"
     },
     {
       "date": "2026-08-06",
@@ -412,10 +364,22 @@
       "link": "https://www.ticketmaster.com/chance-the-rapper-coloring-book-10-philadelphia-pennsylvania-08-22-2026/event/020064A89EC7AA71"
     },
     {
+      "date": "2026-08-22",
+      "bands": "Emo Night Brooklyn (21+ event)",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/emo-night-brooklyn-21-event-philadelphia-pennsylvania-08-22-2026/event/020064E2B729CC19"
+    },
+    {
       "date": "2026-08-23",
       "bands": "Faetooth",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-faetooth-185584"
+    },
+    {
+      "date": "2026-08-23",
+      "bands": "Recession Pop Old Vs New Dance Party",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-recession-pop-old-vs-new-dance-party-197665"
     },
     {
       "date": "2026-08-27",
@@ -485,6 +449,12 @@
     },
     {
       "date": "2026-08-31",
+      "bands": "Funebrarum",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-funebrarum-198448"
+    },
+    {
+      "date": "2026-08-31",
       "bands": "Arlo Parks - Desire Tour",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1357677/arlo-parks-desire-tour-tickets"
@@ -502,6 +472,18 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-quicksand-bane-191434"
     },
     {
+      "date": "2026-09-02",
+      "bands": "Henry Moodie - Mood Swings World Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/henry-moodie-mood-swings-world-tour-philadelphia-pennsylvania-09-02-2026/event/020064D19B49A7F3"
+    },
+    {
+      "date": "2026-09-03",
+      "bands": "Nino Paid - Somewhere Over The Rainbow Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/nino-paid-somewhere-over-the-rainbow-philadelphia-pennsylvania-09-03-2026/event/020064E2C972EF7F"
+    },
+    {
       "date": "2026-09-03",
       "bands": "Monolord",
       "venue": "Underground Arts",
@@ -514,10 +496,22 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-emarosa-186110"
     },
     {
+      "date": "2026-09-05",
+      "bands": "Broadway Rave",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-broadway-rave-197602"
+    },
+    {
       "date": "2026-09-07",
       "bands": "Peter Hook & The Light",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1097905/peter-hook-the-light-tickets"
+    },
+    {
+      "date": "2026-09-09",
+      "bands": "POiSON GiRL FRiEND",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/poison-girl-friend-philadelphia-pennsylvania-09-09-2026/event/020064D3F434D73F"
     },
     {
       "date": "2026-09-10",
@@ -542,6 +536,12 @@
       "bands": "Channel Tres / Eliza Rose",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1427040/channel-tres-tickets"
+    },
+    {
+      "date": "2026-09-14",
+      "bands": "The Rasmus / w/ Saint Agnes and Death Valley Dreams",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1515498/the-rasmus-tickets"
     },
     {
       "date": "2026-09-17",
@@ -571,7 +571,7 @@
       "date": "2026-09-21",
       "bands": "Eihwar",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/eihwar-181467"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-eihwar-181467"
     },
     {
       "date": "2026-09-22",
@@ -625,7 +625,7 @@
       "date": "2026-09-27",
       "bands": "Cabaret Voltaire",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/cabaret-voltaire-172991"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-cabaret-voltaire-172991"
     },
     {
       "date": "2026-09-27",
@@ -773,6 +773,12 @@
     },
     {
       "date": "2026-10-25",
+      "bands": "Sophie Truax",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-sophie-truax-197441"
+    },
+    {
+      "date": "2026-10-25",
       "bands": "Osees ft. Brigid Dawson / Traps PS",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1239136/osees-ft-brigid-dawson-tickets"
@@ -836,6 +842,12 @@
       "bands": "Carsie Blanton",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-carsie-blanton-176893"
+    },
+    {
+      "date": "2026-11-09",
+      "bands": "Deerhoof",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-deerhoof-197658"
     },
     {
       "date": "2026-11-10",
@@ -961,7 +973,7 @@
       "date": "2027-01-21",
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/anna-von-hausswolff-179765"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-anna-von-hausswolff-179765"
     },
     {
       "date": "2027-05-29",
