@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T13:08:54.686062+00:00",
+  "generated_at": "2026-07-20T12:41:17.349004+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,72 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-07-15",
-      "bands": "The Marvelous Miss Gender starring BOSCO (18+ Event)",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/the-marvelous-miss-gender-starring-bosco-philadelphia-pennsylvania-07-15-2026/event/02006465D1EB1D4E"
-    },
-    {
-      "date": "2026-07-16",
-      "bands": "Beano French",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/beano-french-philadelphia-pennsylvania-07-16-2026/event/02006472FE117E2A"
-    },
-    {
-      "date": "2026-07-17",
-      "bands": "Rave Jesus - Rave Revival Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/rave-jesus-rave-revival-tour-philadelphia-pennsylvania-07-17-2026/event/020064700BF93502"
-    },
-    {
-      "date": "2026-07-17",
-      "bands": "WXPN Welcomes TROMBONE SHORTY & ORLEANS AVENUE - LET'S GO GET 'EM TOUR",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/wxpn-welcomes-trombone-shorty-orleans-avenue-philadelphia-pennsylvania-07-17-2026/event/02006452E97C4CF6"
-    },
-    {
-      "date": "2026-07-17",
-      "bands": "BLOODRAVE",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-bloodrave-191246"
-    },
-    {
-      "date": "2026-07-18",
-      "bands": "2slimey USA Tour: NO BASS NO FUN",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/2slimey-usa-tour-no-bass-no-philadelphia-pennsylvania-07-18-2026/event/02006497F8F180A3"
-    },
-    {
-      "date": "2026-07-18",
-      "bands": "Stabbing Westward",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-stabbing-westward-189756"
-    },
-    {
-      "date": "2026-07-18",
-      "bands": "The Frights",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-frights-186696"
-    },
-    {
-      "date": "2026-07-18",
-      "bands": "Finn Wolfhard / Sleeper's Bell",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1427363/finn-wolfhard-tickets"
-    },
-    {
-      "date": "2026-07-19",
-      "bands": "WILLIS",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/willis-philadelphia-pennsylvania-07-19-2026/event/020064979C25EBFD"
-    },
-    {
-      "date": "2026-07-19",
-      "bands": "RX Bandits - And The Battle Begun 20th Anniversary Tour / with Catbite",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1329844/rx-bandits-and-the-battle-begun-20th-anniversary-tour-tickets"
-    },
     {
       "date": "2026-07-23",
       "bands": "End Of America Variety Show",
@@ -395,6 +329,12 @@
     },
     {
       "date": "2026-08-28",
+      "bands": "Grief Sucks: A One Man Show By KevOnStage",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/grief-sucks-a-one-man-show-philadelphia-pennsylvania-08-28-2026/event/020064E785BA5B84"
+    },
+    {
+      "date": "2026-08-28",
       "bands": "Mustard Service",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/mustard-service-philadelphia-pennsylvania-08-28-2026/event/020064ABB95DC794"
@@ -515,6 +455,18 @@
     },
     {
       "date": "2026-09-10",
+      "bands": "Bilmuri - Kinda Hard Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-philadelphia-pennsylvania-09-10-2026/event/02006444DC40C8F1"
+    },
+    {
+      "date": "2026-09-10",
+      "bands": "Evangelia",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/evangelia-philadelphia-pennsylvania-09-10-2026/event/020064BCF70FBFE7"
+    },
+    {
+      "date": "2026-09-10",
       "bands": "Aldous Harding",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-aldous-harding-169463"
@@ -527,9 +479,27 @@
     },
     {
       "date": "2026-09-11",
+      "bands": "156/Silence - From A Distance Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/156silence-from-a-distance-tour-philadelphia-pennsylvania-09-11-2026/event/020064BDD13047DB"
+    },
+    {
+      "date": "2026-09-11",
+      "bands": "Bilmuri - Kinda Hard Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-philadelphia-pennsylvania-09-11-2026/event/02006444DC44C8F6"
+    },
+    {
+      "date": "2026-09-11",
       "bands": "Black Marble / Public Circuit, Jimmy Cicero",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1434651/black-marble-tickets"
+    },
+    {
+      "date": "2026-09-12",
+      "bands": "LAUNDRY DAY Presents: The Larger Than LIFE Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/laundry-day-presents-the-larger-than-philadelphia-pennsylvania-09-12-2026/event/020064ADBB62CEB7"
     },
     {
       "date": "2026-09-12",
@@ -694,6 +664,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-revocation-192167"
     },
     {
+      "date": "2026-10-10",
+      "bands": "Knox / Emi Grace",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1518076/knox-tickets"
+    },
+    {
       "date": "2026-10-12",
       "bands": "SUGAR / J. Robbins (Jawbox)",
       "venue": "Union Transfer",
@@ -707,7 +683,7 @@
     },
     {
       "date": "2026-10-14",
-      "bands": "Show Me The Body / with Lip Critic, Jivebomb",
+      "bands": "Show Me The Body / with Lip Critic, Combust",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1477893/show-me-the-body-tickets"
     },
@@ -863,7 +839,7 @@
     },
     {
       "date": "2026-11-11",
-      "bands": "Chat Pile / Soul Glo, Shallowater",
+      "bands": "Chat Pile / Soul Glo, Shallowater, Skullpresser",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1479534/chat-pile-tickets"
     },
@@ -878,6 +854,12 @@
       "bands": "Slow Pulp / Her New Knife",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1438480/slow-pulp-tickets"
+    },
+    {
+      "date": "2026-11-13",
+      "bands": "Dilly Dally Fest 4",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-dilly-dally-fest-4-198983"
     },
     {
       "date": "2026-11-13",
@@ -896,6 +878,12 @@
       "bands": "Giant Rooks",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1434660/giant-rooks-tickets"
+    },
+    {
+      "date": "2026-11-15",
+      "bands": "Dilly Dally Fest 4 / Pianos Become the Teeth, Dead Calm, April's Love Affair, Dead Butterflies, Flowers Taped To Pens, departmefrombearisland, Told Not To Worry, Rosemary Nods Upon The Grave",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1521761/dilly-dally-fest-4-tickets"
     },
     {
       "date": "2026-11-16",
@@ -974,6 +962,12 @@
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-anna-von-hausswolff-179765"
+    },
+    {
+      "date": "2027-03-20",
+      "bands": "Valencia Grace",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-valencia-grace-198300"
     },
     {
       "date": "2027-05-29",
