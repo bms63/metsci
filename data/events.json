@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T12:41:17.349004+00:00",
+  "generated_at": "2026-07-27T13:00:24.859680+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,72 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-07-23",
-      "bands": "End Of America Variety Show",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-end-of-america-variety-show-196417"
-    },
-    {
-      "date": "2026-07-24",
-      "bands": "chandol",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/chandol-philadelphia-pennsylvania-07-24-2026/event/020064B6F97F9662"
-    },
-    {
-      "date": "2026-07-24",
-      "bands": "Man Man",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-man-man-182810"
-    },
-    {
-      "date": "2026-07-24",
-      "bands": "Wunderhorse / Been Stellar",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1367375/wunderhorse-tickets"
-    },
-    {
-      "date": "2026-07-25",
-      "bands": "BABYCHIEFDOIT PRESENTS: THE RAMBO TOUR",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/babychiefdoit-presents-the-rambo-tour-philadelphia-pennsylvania-07-25-2026/event/020064B4A56C9DC3"
-    },
-    {
-      "date": "2026-07-25",
-      "bands": "Blue Corner Promotions Presents: Independence Brawl",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/blue-corner-promotions-presents-independence-brawl-philadelphia-pennsylvania-07-25-2026/event/020064C8FD1FEEC0"
-    },
-    {
-      "date": "2026-07-25",
-      "bands": "Allah-Las",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-allah-las-180746"
-    },
-    {
-      "date": "2026-07-25",
-      "bands": "School of Rock Allstars",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-school-of-rock-allstars-190307"
-    },
-    {
-      "date": "2026-07-25",
-      "bands": "Heated Twilight: A Heated Rivalry + Twilight Dance Party  (18+ Event)",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1465483/heated-twilight-a-heated-rivalry-twilight-dance-party-18-event-tickets"
-    },
-    {
-      "date": "2026-07-26",
-      "bands": "WXPN Welcomes: Passion Pit - The Pretty Penny Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/wxpn-welcomes-passion-pit-the-pretty-philadelphia-pennsylvania-07-26-2026/event/02006463CFAEE80A"
-    },
-    {
-      "date": "2026-07-26",
-      "bands": "SAZ\u00d3N: SIN VERG\u00dcENZA!",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-saz-n-sin-verg-enza--194425"
-    },
     {
       "date": "2026-07-27",
       "bands": "Tomahawk / Melvins",
@@ -128,6 +62,12 @@
       "bands": "Beyonc\u00e9 Night + Sweet Revenge Dance Party",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-beyonc-night-sweet-revenge-dance-party-193348"
+    },
+    {
+      "date": "2026-08-02",
+      "bands": "Dinner Party ft. Terrace Martin, Robert Glasper, & Kamasi Washington / with Digable Planets, and MonoNeon",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1535113/dinner-party-ft-terrace-martin-robert-glasper-kamasi-washington-tickets"
     },
     {
       "date": "2026-08-03",
@@ -490,16 +430,22 @@
       "link": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-philadelphia-pennsylvania-09-11-2026/event/02006444DC44C8F6"
     },
     {
-      "date": "2026-09-11",
-      "bands": "Black Marble / Public Circuit, Jimmy Cicero",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1434651/black-marble-tickets"
-    },
-    {
       "date": "2026-09-12",
       "bands": "LAUNDRY DAY Presents: The Larger Than LIFE Tour",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/laundry-day-presents-the-larger-than-philadelphia-pennsylvania-09-12-2026/event/020064ADBB62CEB7"
+    },
+    {
+      "date": "2026-09-12",
+      "bands": "Little Stranger",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/little-stranger-philadelphia-pennsylvania-09-12-2026/event/02006478A29F97B4"
+    },
+    {
+      "date": "2026-09-12",
+      "bands": "Black Marble",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-black-marble-200076"
     },
     {
       "date": "2026-09-12",
@@ -509,9 +455,27 @@
     },
     {
       "date": "2026-09-14",
+      "bands": "CHXRRY - The Ego Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/chxrry-the-ego-tour-philadelphia-pennsylvania-09-14-2026/event/020064C4AC33DADB"
+    },
+    {
+      "date": "2026-09-14",
       "bands": "The Rasmus / w/ Saint Agnes and Death Valley Dreams",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1515498/the-rasmus-tickets"
+    },
+    {
+      "date": "2026-09-15",
+      "bands": "Circa Survive",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/circa-survive-philadelphia-pennsylvania-09-15-2026/event/02006458B12B5B88"
+    },
+    {
+      "date": "2026-09-15",
+      "bands": "Wax\u00a0+ DJ Hoppa with Grieves",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/wax-dj-hoppa-with-grieves-philadelphia-pennsylvania-09-15-2026/event/0200647E965A5D46"
     },
     {
       "date": "2026-09-17",
@@ -671,6 +635,12 @@
     },
     {
       "date": "2026-10-12",
+      "bands": "Voivod",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-voivod-200070"
+    },
+    {
+      "date": "2026-10-12",
       "bands": "SUGAR / J. Robbins (Jawbox)",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1300885/sugar-tickets"
@@ -706,6 +676,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-dillinger-escape-plan-189146"
     },
     {
+      "date": "2026-10-16",
+      "bands": "Rebecca Black",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1518680/rebecca-black-tickets"
+    },
+    {
       "date": "2026-10-17",
       "bands": "Sweet Pill",
       "venue": "Underground Arts",
@@ -736,6 +712,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-chasing-abbey-180849"
     },
     {
+      "date": "2026-10-19",
+      "bands": "Mike D 5D",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1527324/mike-d-5d-tickets"
+    },
+    {
       "date": "2026-10-22",
       "bands": "Waylon Wyatt",
       "venue": "Union Transfer",
@@ -758,6 +740,12 @@
       "bands": "Osees ft. Brigid Dawson / Traps PS",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1239136/osees-ft-brigid-dawson-tickets"
+    },
+    {
+      "date": "2026-10-26",
+      "bands": "Luke Severeid",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-luke-severeid-199336"
     },
     {
       "date": "2026-10-28",
@@ -911,7 +899,7 @@
     },
     {
       "date": "2026-11-21",
-      "bands": "Julia Jacklin",
+      "bands": "Julia Jacklin / Jordan Patterson",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1468093/julia-jacklin-tickets"
     },
@@ -940,6 +928,12 @@
       "link": "https://www.axs.com/events/1457701/rhye-tickets"
     },
     {
+      "date": "2026-12-10",
+      "bands": "Emma Ruth Rundle",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-emma-ruth-rundle-199732"
+    },
+    {
       "date": "2026-12-12",
       "bands": "Joe Jordan",
       "venue": "Underground Arts",
@@ -950,6 +944,12 @@
       "bands": "King Buffalo",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-king-buffalo-190650"
+    },
+    {
+      "date": "2026-12-13",
+      "bands": "The Bouncing Souls / The Suicide Machines, The Flatliners, The Jack Knives",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1526701/the-bouncing-souls-tickets"
     },
     {
       "date": "2026-12-18",
