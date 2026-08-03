@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T13:00:24.859680+00:00",
+  "generated_at": "2026-08-03T13:00:00.094584+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,66 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-07-27",
-      "bands": "Tomahawk / Melvins",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1342595/tomahawk-tickets"
-    },
-    {
-      "date": "2026-07-30",
-      "bands": "Babe Rainbow",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/babe-rainbow-philadelphia-pennsylvania-07-30-2026/event/020064A19313AC7B"
-    },
-    {
-      "date": "2026-07-31",
-      "bands": "PJ Morton - Saturday Night Sunday Morning Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/pj-morton-saturday-night-sunday-morning-philadelphia-pennsylvania-07-31-2026/event/02006488D4CDE3CE"
-    },
-    {
-      "date": "2026-07-31",
-      "bands": "The Word Alive - The Deceiver & Dark Matter Anniversary Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/the-word-alive-the-deceiver-dark-philadelphia-pennsylvania-07-31-2026/event/02006491E5FF19B7"
-    },
-    {
-      "date": "2026-07-31",
-      "bands": "Off Campus Dance Party",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-off-campus-dance-party-194336"
-    },
-    {
-      "date": "2026-08-01",
-      "bands": "Emo Nite",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-emo-nite-191014"
-    },
-    {
-      "date": "2026-08-01",
-      "bands": "Millennial Matinee Dance Party - TRL Edition",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-millennial-matinee-dance-party-trl-edition-193346"
-    },
-    {
-      "date": "2026-08-02",
-      "bands": "Beyonc\u00e9 Night + Sweet Revenge Dance Party",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-beyonc-night-sweet-revenge-dance-party-193348"
-    },
-    {
-      "date": "2026-08-02",
-      "bands": "Dinner Party ft. Terrace Martin, Robert Glasper, & Kamasi Washington / with Digable Planets, and MonoNeon",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1535113/dinner-party-ft-terrace-martin-robert-glasper-kamasi-washington-tickets"
-    },
-    {
-      "date": "2026-08-03",
-      "bands": "The California Honeydrops",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-california-honeydrops-175868"
-    },
     {
       "date": "2026-08-05",
       "bands": "KALEO - Way Down We Go Tour",
@@ -100,12 +40,6 @@
       "link": "https://www.ticketmaster.com/royal-coda-philadelphia-pennsylvania-08-07-2026/event/020064A8DC8B5A61"
     },
     {
-      "date": "2026-08-07",
-      "bands": "2charm",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-2charm-194648"
-    },
-    {
       "date": "2026-08-08",
       "bands": "Cozy Worldwide: Throwback and Current R&B / Hip Hop Party - 21+ Event",
       "venue": "The Fillmore",
@@ -125,7 +59,7 @@
     },
     {
       "date": "2026-08-08",
-      "bands": "Loe Shimmy",
+      "bands": "Loe Shimmy / Lakeyah",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1453663/loe-shimmy-tickets"
     },
@@ -140,12 +74,6 @@
       "bands": "Chance Pe\u00f1a / Hans Williams",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1241105/chance-pena-tickets"
-    },
-    {
-      "date": "2026-08-12",
-      "bands": "Molly Santana & North West: KIMOKAWAII TOUR",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/molly-santana-north-west-kimokawaii-tour-philadelphia-pennsylvania-08-12-2026/event/020064CA9825BA1A"
     },
     {
       "date": "2026-08-12",
@@ -478,6 +406,30 @@
       "link": "https://www.ticketmaster.com/wax-dj-hoppa-with-grieves-philadelphia-pennsylvania-09-15-2026/event/0200647E965A5D46"
     },
     {
+      "date": "2026-09-16",
+      "bands": "Circa Survive",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/circa-survive-philadelphia-pennsylvania-09-16-2026/event/02006458B1275B59"
+    },
+    {
+      "date": "2026-09-16",
+      "bands": "Culture Wars",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/culture-wars-philadelphia-pennsylvania-09-16-2026/event/0200648294FC78BE"
+    },
+    {
+      "date": "2026-09-17",
+      "bands": "Circa Survive",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/circa-survive-philadelphia-pennsylvania-09-17-2026/event/02006458B1245B16"
+    },
+    {
+      "date": "2026-09-17",
+      "bands": "Mari Froes",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/mari-froes-philadelphia-pennsylvania-09-17-2026/event/020064BC026FDA32"
+    },
+    {
       "date": "2026-09-17",
       "bands": "Angine de Poitrine **SOLD OUT**",
       "venue": "Underground Arts",
@@ -521,7 +473,7 @@
     },
     {
       "date": "2026-09-23",
-      "bands": "The Charlatans UK  (21+ Event)",
+      "bands": "The Charlatans UK  (21+ Event) / Frankie Rose",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1413671/the-charlatans-uk-21-event-tickets"
     },
@@ -584,6 +536,12 @@
       "bands": "Chinese Football",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-chinese-football-195377"
+    },
+    {
+      "date": "2026-10-01",
+      "bands": "JOZZY",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-jozzy-200940"
     },
     {
       "date": "2026-10-02",
@@ -719,7 +677,7 @@
     },
     {
       "date": "2026-10-22",
-      "bands": "Waylon Wyatt",
+      "bands": "Waylon Wyatt / Noah James",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1445938/waylon-wyatt-tickets"
     },
@@ -857,7 +815,7 @@
     },
     {
       "date": "2026-11-13",
-      "bands": "Ax and the Hatchetmen",
+      "bands": "Ax and the Hatchetmen / Tipling Rock",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1449347/ax-and-the-hatchetmen-tickets"
     },
@@ -908,6 +866,12 @@
       "bands": "Yaelokre / Ben Caplan",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1489853/yaelokre-tickets"
+    },
+    {
+      "date": "2026-11-26",
+      "bands": "Nocturne Wednesdays Official Reunion",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-nocturne-wednesdays-official-reunion-200982"
     },
     {
       "date": "2026-12-04",
