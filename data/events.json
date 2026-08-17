@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T12:14:18.695775+00:00",
+  "generated_at": "2026-08-17T12:05:09.624298+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,72 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-08-10",
-      "bands": "Chance Pe\u00f1a / Hans Williams",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1241105/chance-pena-tickets"
-    },
-    {
-      "date": "2026-08-11",
-      "bands": "CLOSED FOR PRIVATE EVENT",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-closed-for-private-event-200413"
-    },
-    {
-      "date": "2026-08-12",
-      "bands": "Dogstar: ALL IN NOW TOUR / The Backfires",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1332406/dogstar-all-in-now-tour-tickets"
-    },
-    {
-      "date": "2026-08-13",
-      "bands": "Hail The Sun / Lobby Boxer, Coletta",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1472642/hail-the-sun-tickets"
-    },
-    {
-      "date": "2026-08-14",
-      "bands": "HAYLA",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-hayla-186636"
-    },
-    {
-      "date": "2026-08-14",
-      "bands": "Eagles of Death Metal / Mountain Head",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1380733/eagles-of-death-metal-tickets"
-    },
-    {
-      "date": "2026-08-15",
-      "bands": "Jack Harlow - Monica Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/jack-harlow-monica-tour-philadelphia-pennsylvania-08-15-2026/event/02006470DA47D4CF"
-    },
-    {
-      "date": "2026-08-15",
-      "bands": "Of Virtue & Savage Hands",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/of-virtue-savage-hands-philadelphia-pennsylvania-08-15-2026/event/020064ACA3E6A494"
-    },
-    {
-      "date": "2026-08-15",
-      "bands": "Blade Rave",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-blade-rave-192839"
-    },
-    {
-      "date": "2026-08-15",
-      "bands": "Pomplamoose / Jacaranda",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1428064/pomplamoose-tickets"
-    },
-    {
-      "date": "2026-08-16",
-      "bands": "Yard Act",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-yard-act-186251"
-    },
     {
       "date": "2026-08-17",
       "bands": "Max McNown - The Summer Vacation Tour",
@@ -221,7 +155,7 @@
     },
     {
       "date": "2026-08-31",
-      "bands": "Arlo Parks - Desire Tour",
+      "bands": "Arlo Parks - Desire Tour / Baird",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1357677/arlo-parks-desire-tour-tickets"
     },
@@ -449,6 +383,18 @@
     },
     {
       "date": "2026-09-20",
+      "bands": "Don West",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/don-west-philadelphia-pennsylvania-09-20-2026/event/02006473E73E3D12"
+    },
+    {
+      "date": "2026-09-20",
+      "bands": "Sons of Legion - Soul to S\u00d8L World Tour 2026",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/sons-of-legion-soul-to-sl-philadelphia-pennsylvania-09-20-2026/event/020064D0EB1E7A7B"
+    },
+    {
+      "date": "2026-09-20",
       "bands": "House of Heavy",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-house-of-heavy-202061"
@@ -578,6 +524,12 @@
       "bands": "Da\u00f0i Freyr / with BR\u00cdET",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1383106/daoi-freyr-tickets"
+    },
+    {
+      "date": "2026-10-10",
+      "bands": "Olivia O\\'Brien",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-olivia-o-brien-202425"
     },
     {
       "date": "2026-10-10",
@@ -718,16 +670,16 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-prayers-201974"
     },
     {
+      "date": "2026-10-27",
+      "bands": "Bassvictim / Thoom",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1519888/bassvictim-tickets"
+    },
+    {
       "date": "2026-10-28",
       "bands": "Jukebox the Ghost",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1441084/jukebox-the-ghost-tickets"
-    },
-    {
-      "date": "2026-10-31",
-      "bands": "Blondshell / Prewn",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1447996/blondshell-tickets"
     },
     {
       "date": "2026-11-01",
@@ -881,7 +833,7 @@
     },
     {
       "date": "2026-11-20",
-      "bands": "Low Cut Connie",
+      "bands": "Low Cut Connie / The Flying Vees, The Ben Vaughn Quintet",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1414994/low-cut-connie-tickets"
     },
@@ -916,6 +868,12 @@
       "link": "https://www.axs.com/events/1474820/bonobo-tickets"
     },
     {
+      "date": "2026-12-05",
+      "bands": "Venna  (21+ Event)",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1558295/venna-21-event-tickets"
+    },
+    {
       "date": "2026-12-09",
       "bands": "Rhye",
       "venue": "Union Transfer",
@@ -928,10 +886,22 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-emma-ruth-rundle-199732"
     },
     {
+      "date": "2026-12-11",
+      "bands": "Heavens Edge / Trixter, Spread Eagle",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1559454/heavens-edge-tickets"
+    },
+    {
       "date": "2026-12-12",
       "bands": "Joe Jordan",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-joe-jordan-195373"
+    },
+    {
+      "date": "2026-12-12",
+      "bands": "Into It. Over It.",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1557941/into-it-over-it-tickets"
     },
     {
       "date": "2026-12-13",
@@ -952,10 +922,22 @@
       "link": "https://www.axs.com/events/1454072/they-are-gutting-a-body-of-water-tickets"
     },
     {
+      "date": "2026-12-19",
+      "bands": "Thee Sinseers",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-thee-sinseers-201509"
+    },
+    {
       "date": "2027-01-21",
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-anna-von-hausswolff-179765"
+    },
+    {
+      "date": "2027-03-14",
+      "bands": "Blondshell",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1447996/blondshell-tickets"
     },
     {
       "date": "2027-03-20",
