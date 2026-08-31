@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T12:06:45.840214+00:00",
+  "generated_at": "2026-08-31T12:06:43.031461+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,90 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-08-27",
-      "bands": "Kail Lowry: Fatherless Behavior Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/kail-lowry-fatherless-behavior-tour-philadelphia-pennsylvania-08-27-2026/event/0200646CD9D6F004"
-    },
-    {
-      "date": "2026-08-27",
-      "bands": "greek! live tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/greek-live-tour-philadelphia-pennsylvania-08-27-2026/event/020064D2FEDC328A"
-    },
-    {
-      "date": "2026-08-28",
-      "bands": "Grief Sucks: A One Man Show By KevOnStage",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/grief-sucks-a-one-man-show-philadelphia-pennsylvania-08-28-2026/event/020064E785BA5B84"
-    },
-    {
-      "date": "2026-08-28",
-      "bands": "Mustard Service",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/mustard-service-philadelphia-pennsylvania-08-28-2026/event/020064ABB95DC794"
-    },
-    {
-      "date": "2026-08-28",
-      "bands": "Swervedriver",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-swervedriver-189456"
-    },
-    {
-      "date": "2026-08-28",
-      "bands": "Therapy Gecko",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/therapy-gecko-176505"
-    },
-    {
-      "date": "2026-08-29",
-      "bands": "CRASHING OUT LIVE",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/crashing-out-live-philadelphia-pennsylvania-08-29-2026/event/0200648F8D126D20"
-    },
-    {
-      "date": "2026-08-29",
-      "bands": "Meltt",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/meltt-philadelphia-pennsylvania-08-29-2026/event/02006481EB023A0E"
-    },
-    {
-      "date": "2026-08-29",
-      "bands": "CLOSED FOR PRIVATE EVENT",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-closed-for-private-event-156037"
-    },
-    {
-      "date": "2026-08-29",
-      "bands": "Citizen / Hotline TNT, Anxious, Rocket",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1417965/citizen-tickets"
-    },
-    {
-      "date": "2026-08-30",
-      "bands": "Vacation Manor",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/vacation-manor-philadelphia-pennsylvania-08-30-2026/event/02006483B14BCCDE"
-    },
-    {
-      "date": "2026-08-30",
-      "bands": "Rising Tide",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1450911/rising-tide-tickets"
-    },
-    {
-      "date": "2026-08-30",
-      "bands": "Rising Tide",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1450937/rising-tide-tickets"
-    },
-    {
-      "date": "2026-08-31",
-      "bands": "Funebrarum",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-funebrarum-198448"
-    },
     {
       "date": "2026-08-31",
       "bands": "Arlo Parks - Desire Tour / Baird",
@@ -179,9 +95,9 @@
     },
     {
       "date": "2026-09-10",
-      "bands": "Aldous Harding",
+      "bands": "Aldous Harding ** SOLD OUT **",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-aldous-harding-169463"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-aldous-harding-sold-out--169463"
     },
     {
       "date": "2026-09-10",
@@ -292,6 +208,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-angine-de-poitrine-sold-out--181254"
     },
     {
+      "date": "2026-09-17",
+      "bands": "Friendly Feud",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-friendly-feud-204625"
+    },
+    {
       "date": "2026-09-18",
       "bands": "Charles Wesley Godwin - Christian Name Tour",
       "venue": "The Fillmore",
@@ -377,7 +299,7 @@
     },
     {
       "date": "2026-09-22",
-      "bands": "Jensen McRae",
+      "bands": "Jensen McRae / Gretta Ray",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1485533/jensen-mcrae-tickets"
     },
@@ -424,6 +346,30 @@
       "link": "https://www.axs.com/events/1351178/altn-gun-tickets"
     },
     {
+      "date": "2026-09-25",
+      "bands": "SEX PISTOLS (Steve Jones, Paul Cook, Glen Matlock) feat. Frank Carter",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/sex-pistols-steve-jones-paul-cook-philadelphia-pennsylvania-09-25-2026/event/0200627BD31B6E6F"
+    },
+    {
+      "date": "2026-09-25",
+      "bands": "gnash",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/gnash-philadelphia-pennsylvania-09-25-2026/event/02006451D4A3E03B"
+    },
+    {
+      "date": "2026-09-26",
+      "bands": "Armand Hammer",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/armand-hammer-philadelphia-pennsylvania-09-26-2026/event/0200642FB252C8D0"
+    },
+    {
+      "date": "2026-09-26",
+      "bands": "Two Door Cinema Club - Tourist History 15th Anniversary Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/two-door-cinema-club-tourist-history-philadelphia-pennsylvania-09-26-2026/event/02006469C3B2B897"
+    },
+    {
       "date": "2026-09-26",
       "bands": "Slothrust",
       "venue": "Underground Arts",
@@ -434,6 +380,12 @@
       "bands": "LP",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1423465/lp-tickets"
+    },
+    {
+      "date": "2026-09-27",
+      "bands": "Kevin Atwater - Blush Red Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/kevin-atwater-blush-red-tour-philadelphia-pennsylvania-09-27-2026/event/020064C4CC1838A0"
     },
     {
       "date": "2026-09-27",
@@ -461,9 +413,21 @@
     },
     {
       "date": "2026-09-30",
+      "bands": "Lenny Pearce - Toddler Rave World Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/lenny-pearce-toddler-rave-world-tour-philadelphia-pennsylvania-09-30-2026/event/020064C3CAF726E8"
+    },
+    {
+      "date": "2026-09-30",
       "bands": "Chinese Football",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-chinese-football-195377"
+    },
+    {
+      "date": "2026-10-01",
+      "bands": "Randy Feltface: Gimmick",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/randy-feltface-gimmick-philadelphia-pennsylvania-10-01-2026/event/02006458F1EC414B"
     },
     {
       "date": "2026-10-01",
@@ -670,6 +634,12 @@
       "link": "https://www.axs.com/events/1441084/jukebox-the-ghost-tickets"
     },
     {
+      "date": "2026-10-29",
+      "bands": "SPEED / E-Town Concrete, Division Of Mind, No Idols, Suicide Eyes",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1586307/speed-tickets"
+    },
+    {
       "date": "2026-10-31",
       "bands": "SUPERNATURAL DANCE PARTY",
       "venue": "Underground Arts",
@@ -704,6 +674,12 @@
       "bands": "Blu DeTiger",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-blu-detiger-203139"
+    },
+    {
+      "date": "2026-11-04",
+      "bands": "Brutalismus 3000 / Dorian Electra , EERA, govlink",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1541547/brutalismus-3000-tickets"
     },
     {
       "date": "2026-11-05",
@@ -818,6 +794,18 @@
       "bands": "Die Spitz / Faetooth",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1343297/die-spitz-tickets"
+    },
+    {
+      "date": "2026-11-17",
+      "bands": "Frost Children / Kuru, Olswel",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1587658/frost-children-tickets"
+    },
+    {
+      "date": "2026-11-18",
+      "bands": "Frost Children - 2nd Show Added! / Kuru, Olswel",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1587668/frost-children-2nd-show-added-tickets"
     },
     {
       "date": "2026-11-19",
@@ -962,6 +950,12 @@
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-anna-von-hausswolff-179765"
+    },
+    {
+      "date": "2027-02-13",
+      "bands": "Dinosaur Jr. / with special guest Starcrawler",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1582226/dinosaur-jr-tickets"
     },
     {
       "date": "2027-03-14",
