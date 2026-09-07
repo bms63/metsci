@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T12:06:43.031461+00:00",
+  "generated_at": "2026-09-07T12:06:14.991742+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,60 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-08-31",
-      "bands": "Arlo Parks - Desire Tour / Baird",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1357677/arlo-parks-desire-tour-tickets"
-    },
-    {
-      "date": "2026-09-01",
-      "bands": "Sincere\u00a0Engineer\u00a0- The Probable Claws Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/sincere-engineer-the-probable-claws-tour-philadelphia-pennsylvania-09-01-2026/event/02006474C1F7E5C4"
-    },
-    {
-      "date": "2026-09-01",
-      "bands": "Quicksand + Bane",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-quicksand-bane-191434"
-    },
-    {
-      "date": "2026-09-02",
-      "bands": "Henry Moodie - Mood Swings World Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/henry-moodie-mood-swings-world-tour-philadelphia-pennsylvania-09-02-2026/event/020064D19B49A7F3"
-    },
-    {
-      "date": "2026-09-03",
-      "bands": "Nino Paid - Somewhere Over The Rainbow Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/nino-paid-somewhere-over-the-rainbow-philadelphia-pennsylvania-09-03-2026/event/020064E2C972EF7F"
-    },
-    {
-      "date": "2026-09-03",
-      "bands": "Monolord",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-monolord-183720"
-    },
-    {
-      "date": "2026-09-04",
-      "bands": "Emarosa",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-emarosa-186110"
-    },
-    {
-      "date": "2026-09-05",
-      "bands": "Broadway Rave",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-broadway-rave-197602"
-    },
-    {
-      "date": "2026-09-06",
-      "bands": "Emo Nite",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-emo-nite-201693"
-    },
     {
       "date": "2026-09-07",
       "bands": "Peter Hook & The Light",
@@ -431,15 +377,33 @@
     },
     {
       "date": "2026-10-01",
+      "bands": "Weatherday",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/weatherday-philadelphia-pennsylvania-10-01-2026/event/0200648601E615FD"
+    },
+    {
+      "date": "2026-10-01",
       "bands": "JOZZY",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-jozzy-200940"
     },
     {
       "date": "2026-10-02",
+      "bands": "Skillet: Comatose 20 Years, Still Screaming Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/skillet-comatose-20-years-still-screaming-philadelphia-pennsylvania-10-02-2026/event/020064CBD9F060DF"
+    },
+    {
+      "date": "2026-10-02",
       "bands": "Public Image Ltd / Plague Vendor",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1367123/public-image-ltd-tickets"
+    },
+    {
+      "date": "2026-10-03",
+      "bands": "Switchfoot with special guest Anberlin - Forever Now Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/switchfoot-with-special-guest-anberlin-forever-philadelphia-pennsylvania-10-03-2026/event/020064A5A242C7E8"
     },
     {
       "date": "2026-10-03",
@@ -464,6 +428,12 @@
       "bands": "Bright Eyes / Lullaby For The Working Class",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1484028/bright-eyes-tickets"
+    },
+    {
+      "date": "2026-10-08",
+      "bands": "Video Bingo: Horror Edition",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-video-bingo-horror-edition-204884"
     },
     {
       "date": "2026-10-08",
@@ -593,15 +563,21 @@
     },
     {
       "date": "2026-10-24",
+      "bands": "Party Girl Halloween - A Night of Party Girl Anthems",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-party-girl-halloween-a-night-of-party-girl-anthems-205701"
+    },
+    {
+      "date": "2026-10-24",
       "bands": "The Damned / Flamin' Groovies, The Courettes",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1413554/the-damned-tickets"
     },
     {
       "date": "2026-10-25",
-      "bands": "Sophie Truax",
+      "bands": "Sophie Truax * Canceled *",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-sophie-truax-197441"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-sophie-truax-canceled--197441"
     },
     {
       "date": "2026-10-25",
@@ -640,6 +616,12 @@
       "link": "https://www.axs.com/events/1586307/speed-tickets"
     },
     {
+      "date": "2026-10-30",
+      "bands": "Holywatr / with Mercury",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1598781/holywatr-tickets"
+    },
+    {
       "date": "2026-10-31",
       "bands": "SUPERNATURAL DANCE PARTY",
       "venue": "Underground Arts",
@@ -653,7 +635,7 @@
     },
     {
       "date": "2026-11-01",
-      "bands": "Judah & The Lion",
+      "bands": "Judah & The Lion / w/ Breakfield, Band of Silver",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1485554/judah-the-lion-tickets"
     },
@@ -968,6 +950,12 @@
       "bands": "Valencia Grace",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-valencia-grace-198300"
+    },
+    {
+      "date": "2027-04-04",
+      "bands": "Arthur Hill",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-arthur-hill-204950"
     },
     {
       "date": "2027-05-29",
