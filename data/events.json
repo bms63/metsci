@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T12:06:14.991742+00:00",
+  "generated_at": "2026-09-14T12:06:25.500369+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -16,90 +16,6 @@
   ],
   "events": [
     {
-      "date": "2026-09-07",
-      "bands": "Peter Hook & The Light",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1097905/peter-hook-the-light-tickets"
-    },
-    {
-      "date": "2026-09-09",
-      "bands": "POiSON GiRL FRiEND",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/poison-girl-friend-philadelphia-pennsylvania-09-09-2026/event/020064D3F434D73F"
-    },
-    {
-      "date": "2026-09-10",
-      "bands": "Bilmuri - Kinda Hard Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-philadelphia-pennsylvania-09-10-2026/event/02006444DC40C8F1"
-    },
-    {
-      "date": "2026-09-10",
-      "bands": "Evangelia",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/evangelia-philadelphia-pennsylvania-09-10-2026/event/020064BCF70FBFE7"
-    },
-    {
-      "date": "2026-09-10",
-      "bands": "Aldous Harding ** SOLD OUT **",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-aldous-harding-sold-out--169463"
-    },
-    {
-      "date": "2026-09-10",
-      "bands": "Hulvey / Indie Tribe, Kijan Boone",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1395268/hulvey-tickets"
-    },
-    {
-      "date": "2026-09-11",
-      "bands": "156/Silence - From A Distance Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/156silence-from-a-distance-tour-philadelphia-pennsylvania-09-11-2026/event/020064BDD13047DB"
-    },
-    {
-      "date": "2026-09-11",
-      "bands": "Bilmuri - Kinda Hard Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-philadelphia-pennsylvania-09-11-2026/event/02006444DC44C8F6"
-    },
-    {
-      "date": "2026-09-11",
-      "bands": "Streetlight Manifesto / Hot Rod Circuit",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1576521/streetlight-manifesto-tickets"
-    },
-    {
-      "date": "2026-09-12",
-      "bands": "LAUNDRY DAY Presents: The Larger Than LIFE Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/laundry-day-presents-the-larger-than-philadelphia-pennsylvania-09-12-2026/event/020064ADBB62CEB7"
-    },
-    {
-      "date": "2026-09-12",
-      "bands": "Little Stranger",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/little-stranger-philadelphia-pennsylvania-09-12-2026/event/02006478A29F97B4"
-    },
-    {
-      "date": "2026-09-12",
-      "bands": "Black Marble",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-black-marble-200076"
-    },
-    {
-      "date": "2026-09-12",
-      "bands": "Channel Tres / Eliza Rose",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1427040/channel-tres-tickets"
-    },
-    {
-      "date": "2026-09-13",
-      "bands": "Heated Rivalry x Off Campus Dance Party",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-heated-rivalry-x-off-campus-dance-party-201695"
-    },
-    {
       "date": "2026-09-14",
       "bands": "CHXRRY - The Ego Tour",
       "venue": "The Fillmore",
@@ -107,9 +23,9 @@
     },
     {
       "date": "2026-09-14",
-      "bands": "The Rasmus / w/ Saint Agnes and Death Valley Dreams",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1515498/the-rasmus-tickets"
+      "bands": "The Rasmus",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-rasmus-206396"
     },
     {
       "date": "2026-09-15",
@@ -407,6 +323,12 @@
     },
     {
       "date": "2026-10-03",
+      "bands": "Towa Bird",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/towa-bird-philadelphia-pennsylvania-10-03-2026/event/020064C4A3D1CA05"
+    },
+    {
+      "date": "2026-10-03",
       "bands": "U5 Fest",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-u5-fest-194647"
@@ -419,9 +341,45 @@
     },
     {
       "date": "2026-10-04",
+      "bands": "Avery Cochrane: Weapons Of Iridescence Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/avery-cochrane-weapons-of-iridescence-tour-philadelphia-pennsylvania-10-04-2026/event/0200650BE2F98C89"
+    },
+    {
+      "date": "2026-10-04",
+      "bands": "Rise Against - Ricochet 2026",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/rise-against-ricochet-2026-philadelphia-pennsylvania-10-04-2026/event/02006469ECF4ED20"
+    },
+    {
+      "date": "2026-10-04",
       "bands": "Russian Circles / Pelican",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1496641/russian-circles-tickets"
+    },
+    {
+      "date": "2026-10-05",
+      "bands": "Luv Language Tour With Jeff Bernat",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/luv-language-tour-with-jeff-bernat-philadelphia-pennsylvania-10-05-2026/event/020064BBA7A61A25"
+    },
+    {
+      "date": "2026-10-06",
+      "bands": "CHIEF KEEF",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/chief-keef-philadelphia-pennsylvania-10-06-2026/event/020064DEDF017775"
+    },
+    {
+      "date": "2026-10-07",
+      "bands": "Justin Nozuka",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/justin-nozuka-philadelphia-pennsylvania-10-07-2026/event/020064B6088FB59F"
+    },
+    {
+      "date": "2026-10-07",
+      "bands": "The Midnight: Time Machines",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/the-midnight-time-machines-philadelphia-pennsylvania-10-07-2026/event/020064AD24B7C6A7"
     },
     {
       "date": "2026-10-07",
@@ -572,6 +530,12 @@
       "bands": "The Damned / Flamin' Groovies, The Courettes",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1413554/the-damned-tickets"
+    },
+    {
+      "date": "2026-10-25",
+      "bands": "Pancakes &amp; Booze: Underground Art Show",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-pancakes-booze-underground-art-show-206111"
     },
     {
       "date": "2026-10-25",
@@ -809,6 +773,12 @@
     },
     {
       "date": "2026-11-21",
+      "bands": "Stage Clear IV! (VGM Festival)",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-stage-clear-iv-vgm-festival--206225"
+    },
+    {
+      "date": "2026-11-21",
       "bands": "Julia Jacklin / Jordan Patterson",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1468093/julia-jacklin-tickets"
@@ -899,7 +869,7 @@
     },
     {
       "date": "2026-12-12",
-      "bands": "Into It. Over It.",
+      "bands": "Into It. Over It. / Prawn, TwentyThreeNineteen, Soir\u00e9e",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1557941/into-it-over-it-tickets"
     },
@@ -932,6 +902,12 @@
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-anna-von-hausswolff-179765"
+    },
+    {
+      "date": "2027-01-24",
+      "bands": "Dead Pioneers",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-dead-pioneers-205892"
     },
     {
       "date": "2027-02-13",
