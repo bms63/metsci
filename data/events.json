@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T12:07:07.138882+00:00",
+  "generated_at": "2026-10-12T12:09:34.071673+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -15,102 +15,6 @@
     }
   ],
   "events": [
-    {
-      "date": "2026-10-05",
-      "bands": "Luv Language Tour With Jeff Bernat",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/luv-language-tour-with-jeff-bernat-philadelphia-pennsylvania-10-05-2026/event/020064BBA7A61A25"
-    },
-    {
-      "date": "2026-10-07",
-      "bands": "Justin Nozuka",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/justin-nozuka-philadelphia-pennsylvania-10-07-2026/event/020064B6088FB59F"
-    },
-    {
-      "date": "2026-10-07",
-      "bands": "The Midnight: Time Machines",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/the-midnight-time-machines-philadelphia-pennsylvania-10-07-2026/event/020064AD24B7C6A7"
-    },
-    {
-      "date": "2026-10-07",
-      "bands": "Bright Eyes / Lullaby For The Working Class",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1484028/bright-eyes-tickets"
-    },
-    {
-      "date": "2026-10-08",
-      "bands": "Video Bingo: Horror Edition",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-video-bingo-horror-edition-204884"
-    },
-    {
-      "date": "2026-10-08",
-      "bands": "Wiles Martyr w/ Mark Ryan + Rieko Saffiya + Housing",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-wiles-martyr-w-mark-ryan-rieko-saffiya-housing-207225"
-    },
-    {
-      "date": "2026-10-08",
-      "bands": "Da\u00f0i Freyr / with BR\u00cdET",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1383106/daoi-freyr-tickets"
-    },
-    {
-      "date": "2026-10-09",
-      "bands": "Basement",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/basement-philadelphia-pennsylvania-10-09-2026/event/0200649ED9066B3E"
-    },
-    {
-      "date": "2026-10-09",
-      "bands": "Owen Riegling",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/owen-riegling-philadelphia-pennsylvania-10-09-2026/event/02006486F3A9F1E4"
-    },
-    {
-      "date": "2026-10-10",
-      "bands": "Westside Cowboy",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/westside-cowboy-philadelphia-pennsylvania-10-10-2026/event/02006528CA0FC35F"
-    },
-    {
-      "date": "2026-10-10",
-      "bands": "Olivia O\\'Brien",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-olivia-o-brien-202425"
-    },
-    {
-      "date": "2026-10-10",
-      "bands": "Revocation",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-revocation-192167"
-    },
-    {
-      "date": "2026-10-10",
-      "bands": "Knox / Emi Grace",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1518076/knox-tickets"
-    },
-    {
-      "date": "2026-10-11",
-      "bands": "INGRID ANDRESS - NOWHERE ELSE TO GO TOUR",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/ingrid-andress-nowhere-else-to-go-philadelphia-pennsylvania-10-11-2026/event/020064E9BF061EA6"
-    },
-    {
-      "date": "2026-10-11",
-      "bands": "Jessie Ware: The Superbloom Tour",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/jessie-ware-the-superbloom-tour-philadelphia-pennsylvania-10-11-2026/event/02006478A9BBA60E"
-    },
-    {
-      "date": "2026-10-12",
-      "bands": "Voivod (**CANCELED!**)",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-voivod-canceled--200070"
-    },
     {
       "date": "2026-10-12",
       "bands": "SUGAR / J. Robbins (Jawbox)",
@@ -329,9 +233,9 @@
     },
     {
       "date": "2026-10-27",
-      "bands": "Prayers",
+      "bands": "Prayers **CANCELED**",
       "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-prayers-201974"
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-prayers-canceled--201974"
     },
     {
       "date": "2026-10-27",
@@ -491,6 +395,12 @@
     },
     {
       "date": "2026-11-06",
+      "bands": "Akeem Ali -the Texture Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/akeem-ali-the-texture-tour-philadelphia-pennsylvania-11-06-2026/event/0200647BB711D7B0"
+    },
+    {
+      "date": "2026-11-06",
       "bands": "Sleeping With Sirens: An Ending In Itself Tour",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/sleeping-with-sirens-an-ending-in-philadelphia-pennsylvania-11-06-2026/event/020064CB97B5A882"
@@ -509,6 +419,18 @@
     },
     {
       "date": "2026-11-07",
+      "bands": "WXPN Welcomes: Geese - Getting Killed Again Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/wxpn-welcomes-geese-getting-killed-again-philadelphia-pennsylvania-11-07-2026/event/02006496F4F8A3B2"
+    },
+    {
+      "date": "2026-11-07",
+      "bands": "WesGhost - If It's Not Forever the tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/wesghost-if-its-not-forever-the-philadelphia-pennsylvania-11-07-2026/event/020064C5AD16EFA9"
+    },
+    {
+      "date": "2026-11-07",
       "bands": "Dual Pathways",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-dual-pathways-209417"
@@ -518,6 +440,18 @@
       "bands": "Left It In The River Tour with Jamie MacDonald / Joe L Barnes",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1479540/left-it-in-the-river-tour-with-jamie-macdonald-tickets"
+    },
+    {
+      "date": "2026-11-08",
+      "bands": "Michigander",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/michigander-philadelphia-pennsylvania-11-08-2026/event/020064A1B6D52BF4"
+    },
+    {
+      "date": "2026-11-08",
+      "bands": "WXPN Welcomes: Geese - Getting Killed Again Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/wxpn-welcomes-geese-getting-killed-again-philadelphia-pennsylvania-11-08-2026/event/02006496F4FCA3BA"
     },
     {
       "date": "2026-11-08",
@@ -536,6 +470,12 @@
       "bands": "Deerhoof",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-deerhoof-197658"
+    },
+    {
+      "date": "2026-11-10",
+      "bands": "Boston Manor",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/boston-manor-philadelphia-pennsylvania-11-10-2026/event/020064B6F63F8F48"
     },
     {
       "date": "2026-11-10",
@@ -593,6 +533,18 @@
     },
     {
       "date": "2026-11-15",
+      "bands": "Alt 104.5 Presents: Blue October",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/alt-1045-presents-blue-october-philadelphia-pennsylvania-11-15-2026/event/02006472CEBAFBC4"
+    },
+    {
+      "date": "2026-11-15",
+      "bands": "The Bends",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/the-bends-philadelphia-pennsylvania-11-15-2026/event/0200648AFD339546"
+    },
+    {
+      "date": "2026-11-15",
       "bands": "Dilly Dally Fest 4 / Pianos Become the Teeth, Dead Calm, April's Love Affair, Dead Butterflies, Flowers Taped To Pens, departmefrombearisland, Told Not To Worry, Rosemary Nods Upon The Grave",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1521761/dilly-dally-fest-4-tickets"
@@ -620,6 +572,12 @@
       "bands": "Frost Children - 2nd Show Added! / Kuru, Olswel",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1587668/frost-children-2nd-show-added-tickets"
+    },
+    {
+      "date": "2026-11-19",
+      "bands": "Friendly Feud",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-friendly-feud-210385"
     },
     {
       "date": "2026-11-19",
@@ -694,6 +652,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-funksgiving-ft-sam-greenfield-muscle-tough-203949"
     },
     {
+      "date": "2026-11-30",
+      "bands": "Raud",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-raud-210167"
+    },
+    {
       "date": "2026-12-04",
       "bands": "Temples",
       "venue": "Underground Arts",
@@ -701,7 +665,7 @@
     },
     {
       "date": "2026-12-04",
-      "bands": "Bonobo",
+      "bands": "Bonobo / ANISH KUMAR",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1474820/bonobo-tickets"
     },
@@ -803,7 +767,7 @@
     },
     {
       "date": "2026-12-18",
-      "bands": "they are gutting a body of water",
+      "bands": "they are gutting a body of water / Jim E. Brown, Big Nick",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1454072/they-are-gutting-a-body-of-water-tickets"
     },
@@ -812,6 +776,24 @@
       "bands": "Thee Sinseers: Love Stories Tour",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-thee-sinseers-love-stories-tour-201509"
+    },
+    {
+      "date": "2027-01-09",
+      "bands": "The Warped Band - The Official Tribute to Warped Tour",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-warped-band-the-official-tribute-to-warped-tour-210391"
+    },
+    {
+      "date": "2027-01-15",
+      "bands": "Jess Williamson",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-jess-williamson-209546"
+    },
+    {
+      "date": "2027-01-16",
+      "bands": "Des Rocs",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-des-rocs-210349"
     },
     {
       "date": "2027-01-21",
@@ -824,6 +806,12 @@
       "bands": "Dead Pioneers",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-dead-pioneers-205892"
+    },
+    {
+      "date": "2027-01-26",
+      "bands": "Wolves In The Throne Room",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-wolves-in-the-throne-room-210002"
     },
     {
       "date": "2027-02-01",
@@ -850,6 +838,12 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-strongboi-191516"
     },
     {
+      "date": "2027-02-26",
+      "bands": "Vacations / Twen",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1634128/vacations-tickets"
+    },
+    {
       "date": "2027-02-27",
       "bands": "Surfer Girl",
       "venue": "Underground Arts",
@@ -859,7 +853,7 @@
       "date": "2027-02-27",
       "bands": "Michael Shannon & Jason Narducy and Friends play R.E.M.\u2019s Document",
       "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1632179/michael-shannon-jason-narducy-and-friends-play-rems-document-tickets"
+      "link": "https://www.axs.com/events/1632179/michael-shannon-jason-narducy-and-friends-play-r-e-m-ys-document-tickets"
     },
     {
       "date": "2027-03-05",
