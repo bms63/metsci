@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T12:04:06.232511+00:00",
+  "generated_at": "2026-11-16T12:07:22.793915+00:00",
   "sources": [
     {
       "venue": "Underground Arts",
@@ -16,94 +16,10 @@
   ],
   "events": [
     {
-      "date": "2026-11-10",
-      "bands": "Boston Manor",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/boston-manor-philadelphia-pennsylvania-11-10-2026/event/020064B6F63F8F48"
-    },
-    {
-      "date": "2026-11-10",
-      "bands": "The Blasting Company / Patrick McHale (creator of OTGW!) & J.R. Kaufman with Jerron Paxton",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1496399/the-blasting-company-tickets"
-    },
-    {
-      "date": "2026-11-11",
-      "bands": "ADULT. + A Place To Bury Strangers",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-adult-a-place-to-bury-strangers-190596"
-    },
-    {
-      "date": "2026-11-11",
-      "bands": "Chat Pile / Soul Glo, Shallowater, Skullpresser",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1479534/chat-pile-tickets"
-    },
-    {
-      "date": "2026-11-12",
-      "bands": "Headache",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-headache-190589"
-    },
-    {
-      "date": "2026-11-12",
-      "bands": "Slow Pulp / Her New Knife",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1438480/slow-pulp-tickets"
-    },
-    {
-      "date": "2026-11-13",
-      "bands": "Hurry Up Fest: A One-Time Benefit for Bands and WOAR - Philadelphia Center Against Sexual Violence",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-hurry-up-fest-a-one-time-benefit-for-bands-and-woar-philadelphia-center-against-sexual-violence-198983"
-    },
-    {
-      "date": "2026-11-13",
-      "bands": "The Wldlfe",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-the-wldlfe-194075"
-    },
-    {
-      "date": "2026-11-13",
-      "bands": "Ax and the Hatchetmen / Tipling Rock",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1449347/ax-and-the-hatchetmen-tickets"
-    },
-    {
-      "date": "2026-11-14",
-      "bands": "Giant Rooks / Gatlin",
-      "venue": "Union Transfer",
-      "link": "https://www.axs.com/events/1434660/giant-rooks-tickets"
-    },
-    {
-      "date": "2026-11-15",
-      "bands": "Alt 104.5 Presents: Blue October",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/alt-1045-presents-blue-october-philadelphia-pennsylvania-11-15-2026/event/02006472CEBAFBC4"
-    },
-    {
-      "date": "2026-11-15",
-      "bands": "The Bends",
-      "venue": "The Fillmore",
-      "link": "https://www.ticketmaster.com/the-bends-philadelphia-pennsylvania-11-15-2026/event/0200648AFD339546"
-    },
-    {
-      "date": "2026-11-15",
-      "bands": "Hurry Up Fest: A One-Time Benefit for Bands and WOAR - Philadelphia Center Against Sexual Violence (Day 3)",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-hurry-up-fest-a-one-time-benefit-for-bands-and-woar-philadelphia-center-against-sexual-violence-day-3--211698"
-    },
-    {
       "date": "2026-11-16",
       "bands": "Weatherday",
       "venue": "The Fillmore",
       "link": "https://www.ticketmaster.com/weatherday-philadelphia-pennsylvania-11-16-2026/event/0200648601E615FD"
-    },
-    {
-      "date": "2026-11-16",
-      "bands": "Donny Ben\u00e9t",
-      "venue": "Underground Arts",
-      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-donny-ben-t-185089"
     },
     {
       "date": "2026-11-16",
@@ -161,7 +77,7 @@
     },
     {
       "date": "2026-11-19",
-      "bands": "Pain of Truth / Madball, Rotting Out, Locked Shut",
+      "bands": "Pain of Truth / Madball, Rotting Out, Locked Shut, GEMSTAR",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1537663/pain-of-truth-tickets"
     },
@@ -503,6 +419,12 @@
     },
     {
       "date": "2026-12-19",
+      "bands": "Dice Raw: Q&amp;A",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-dice-raw-q-a-213646"
+    },
+    {
+      "date": "2026-12-19",
       "bands": "Thee Sinseers: Love Stories Tour",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-thee-sinseers-love-stories-tour-201509"
@@ -524,6 +446,12 @@
       "bands": "Submersion NYE 2026 w/ Mickman, Thought Process, Schmoop & more!",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1693128/submersion-nye-2026-w-mickman-thought-process-schmoop-more-tickets"
+    },
+    {
+      "date": "2027-01-01",
+      "bands": "Recession Pop NYE Party",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-recession-pop-nye-party-213365"
     },
     {
       "date": "2027-01-03",
@@ -560,6 +488,18 @@
       "bands": "Anna von Hausswolff",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-anna-von-hausswolff-179765"
+    },
+    {
+      "date": "2027-01-22",
+      "bands": "Baby Jane",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-baby-jane-212869"
+    },
+    {
+      "date": "2027-01-22",
+      "bands": "Dumb Nathan Fielder Rave  (21+ Event)",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1700601/dumb-nathan-fielder-rave-21-event-tickets"
     },
     {
       "date": "2027-01-23",
@@ -610,6 +550,24 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-syd-olivia-talk-s-t-live-205601"
     },
     {
+      "date": "2027-02-02",
+      "bands": "Bella Poarch Presents Picnic at the Cemetery\u00a0Tour",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/bella-poarch-presents-picnic-at-the-philadelphia-pennsylvania-02-02-2027/event/02006542DD4D6871"
+    },
+    {
+      "date": "2027-02-04",
+      "bands": "Dylan Scott",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/dylan-scott-philadelphia-pennsylvania-02-04-2027/event/0200652AE3A47089"
+    },
+    {
+      "date": "2027-02-04",
+      "bands": "WXPN\u00a0Welcomes Marian Hill ACT TWO: THE TOUR",
+      "venue": "The Fillmore",
+      "link": "https://www.ticketmaster.com/wxpn-welcomes-marian-hill-act-two-philadelphia-pennsylvania-02-04-2027/event/02006528D5BCDD23"
+    },
+    {
       "date": "2027-02-05",
       "bands": "Subterranean Dissonance Fest: The Tony Danza Tapdance Extravaganza, Cave In, Primitive Man &amp; more",
       "venue": "Underground Arts",
@@ -634,10 +592,22 @@
       "link": "https://www.axs.com/events/1668772/babyfxce-e-tickets"
     },
     {
+      "date": "2027-02-20",
+      "bands": "There, There  (A Tribute to Radiohead) - 18+ Event / with Christina Ward",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1698160/there-there-a-tribute-to-radiohead-18-event-tickets"
+    },
+    {
       "date": "2027-02-22",
       "bands": "Raynes",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-raynes-213235"
+    },
+    {
+      "date": "2027-02-23",
+      "bands": "Blameless: The Tour with Jackie Hill Perry",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1694863/blameless-the-tour-with-jackie-hill-perry-tickets"
     },
     {
       "date": "2027-02-24",
@@ -689,9 +659,15 @@
     },
     {
       "date": "2027-03-06",
-      "bands": "Twin Temple",
+      "bands": "Twin Temple / Nuovo Testamento",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1634123/twin-temple-tickets"
+    },
+    {
+      "date": "2027-03-07",
+      "bands": "Silversun Pickups / with Hannah Cole",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1679514/silversun-pickups-tickets"
     },
     {
       "date": "2027-03-14",
@@ -718,6 +694,18 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-koo-koo-211639"
     },
     {
+      "date": "2027-03-21",
+      "bands": "Gang of Youths / The Sophs",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1695408/gang-of-youths-tickets"
+    },
+    {
+      "date": "2027-03-24",
+      "bands": "Gang Of Four",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-gang-of-four-213440"
+    },
+    {
       "date": "2027-03-26",
       "bands": "Caroline Rose",
       "venue": "Union Transfer",
@@ -736,6 +724,18 @@
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-haywire-212121"
     },
     {
+      "date": "2027-04-01",
+      "bands": "Noga Erez",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1696810/noga-erez-tickets"
+    },
+    {
+      "date": "2027-04-03",
+      "bands": "Royal Blood / Bodega",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1686991/royal-blood-tickets"
+    },
+    {
       "date": "2027-04-04",
       "bands": "Arthur Hill",
       "venue": "Underground Arts",
@@ -746,6 +746,12 @@
       "bands": "TWRP / Jazz Emu",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1688801/twrp-tickets"
+    },
+    {
+      "date": "2027-04-06",
+      "bands": "Goldie Boutilier / Cailin Russo",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1688774/goldie-boutilier-tickets"
     },
     {
       "date": "2027-04-07",
@@ -784,10 +790,28 @@
       "link": "https://www.axs.com/events/1676572/diiv-tickets"
     },
     {
+      "date": "2027-04-19",
+      "bands": "Beach Bunny / With special guest Daisy Grenade",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1688909/beach-bunny-tickets"
+    },
+    {
       "date": "2027-05-05",
       "bands": "Shygirl",
       "venue": "Union Transfer",
       "link": "https://www.axs.com/events/1655897/shygirl-tickets"
+    },
+    {
+      "date": "2027-05-08",
+      "bands": "MC4D",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-mc4d-213294"
+    },
+    {
+      "date": "2027-05-13",
+      "bands": "Gurriers",
+      "venue": "Underground Arts",
+      "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-gurriers-212232"
     },
     {
       "date": "2027-05-16",
@@ -800,6 +824,12 @@
       "bands": "HENGE",
       "venue": "Underground Arts",
       "link": "https://www.tixr.com/groups/undergroundarts/events/underground-arts-henge-194649"
+    },
+    {
+      "date": "2027-06-17",
+      "bands": "Whitney / w/ Tyler Ballgame",
+      "venue": "Union Transfer",
+      "link": "https://www.axs.com/events/1693115/whitney-tickets"
     },
     {
       "date": "2027-09-19",
